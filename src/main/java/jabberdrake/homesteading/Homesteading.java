@@ -1,5 +1,8 @@
 package jabberdrake.homesteading;
 
+import jabberdrake.homesteading.common.block.ModBlocks;
+import jabberdrake.homesteading.common.registry.ModItemGroups;
+import jabberdrake.homesteading.common.registry.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -16,5 +19,8 @@ public class Homesteading implements ModInitializer {
 		// Proceed with mild caution.
 
 		LOGGER.info("Initializing!");
+		ModItems.registerModItems();
+		ModItemGroups.registerItemGroups();
+		ModBlocks.registerModBlocks();
 	}
 }
