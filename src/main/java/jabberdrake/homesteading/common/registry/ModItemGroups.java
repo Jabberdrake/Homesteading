@@ -1,6 +1,7 @@
 package jabberdrake.homesteading.common.registry;
 
 import jabberdrake.homesteading.Homesteading;
+import jabberdrake.homesteading.common.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -19,6 +20,10 @@ public class ModItemGroups {
                         entries.add(ModItems.RAW_TIN);
                         entries.add(ModItems.TIN_INGOT);
                         entries.add(ModItems.TIN_NUGGET);
+                        entries.add(ModBlocks.TIN_ORE);
+                        entries.add(ModBlocks.DEEPSLATE_TIN_ORE);
+                        entries.add(ModBlocks.RAW_TIN_BLOCK);
+                        entries.add(ModBlocks.TIN_BLOCK);
                     }).build()
     );
 

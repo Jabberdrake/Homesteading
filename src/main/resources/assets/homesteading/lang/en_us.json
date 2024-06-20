@@ -1,5 +1,11 @@
 {
   "itemGroup.homesteading": "Homesteading",
+
+  "block.homesteading.tin_ore": "Tin Ore",
+  "block.homesteading.deepslate_tin_ore": "Deepslate Tin Ore",
+  "block.homesteading.raw_tin_block": "Block of Raw Tin",
+  "block.homesteading.tin_block": "Block of Tin",
+
   "item.homesteading.raw_tin": "Raw Tin",
   "item.homesteading.tin_ingot": "Tin Ingot",
   "item.homesteading.tin_nugget": "Tin Nugget"
