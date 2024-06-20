@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "homesteading",
+	"version": "${version}",
+	"name": "Homesteading",
+	"description": "A simple mod that aims to overhaul Minecraft's progression!",
+	"authors": [
+		"Jabberdrake"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/homesteading/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"jabberdrake.homesteading.Homesteading"
+		],
+		"client": [
+			"jabberdrake.homesteading.HomesteadingClient"
+		],
+		"fabric-datagen": [
+			"jabberdrake.homesteading.HomesteadingDataGenerator"
+		]
+	},
+	"mixins": [
+		"homesteading.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
