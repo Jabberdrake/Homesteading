@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "homesteading:tin_block"
+    }
+  ],
+  "result": {
+    "item": "homesteading:tin_ingot",
+    "count": 9
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "homesteading:tin_ingot"
+    }
+  },
+  "result": {
+    "item": "homesteading:tin_block"
+  }
+}

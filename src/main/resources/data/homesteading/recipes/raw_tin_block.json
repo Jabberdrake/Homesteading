@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "homesteading:raw_tin"
+    }
+  },
+  "result": {
+    "item": "homesteading:raw_tin_block"
+  }
+}
