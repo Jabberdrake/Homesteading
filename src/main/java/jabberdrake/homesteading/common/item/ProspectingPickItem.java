@@ -8,6 +8,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.math.BlockPos;
 
 public class ProspectingPickItem extends Item {
@@ -37,7 +38,7 @@ public class ProspectingPickItem extends Item {
 
                         if (isOreBlock(state)) {
                             foundBlock = true;
-                            player.sendMessage(Text.literal("Found " + block.asItem().getName().getString() + " nearby!"), false);
+                            player.sendMessage(Text.literal("Found " + block.asItem().getName().getString() + " nearby!").formatted(Formatting.LIGHT_PURPLE), false);
                             break;
                         }
                     }
@@ -46,7 +47,7 @@ public class ProspectingPickItem extends Item {
             if (foundBlock) break;
             }
             if (!foundBlock) {
-                player.sendMessage(Text.literal("No ore found nearby!"), false);
+                player.sendMessage(Text.literal("No ore found nearby...").formatted(Formatting.GRAY, Formatting.ITALIC), false);
             }
         }
 
