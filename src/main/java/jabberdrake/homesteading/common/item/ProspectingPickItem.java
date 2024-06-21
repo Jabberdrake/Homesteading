@@ -1,6 +1,7 @@
 package jabberdrake.homesteading.common.item;
 
 import jabberdrake.homesteading.Homesteading;
+import jabberdrake.homesteading.common.util.HomeTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -71,12 +72,7 @@ public class ProspectingPickItem extends Item {
     }
 
     private boolean isOreBlock(BlockState state) {
-        return state.isOf(Blocks.IRON_ORE) ||
-                state.isOf(Blocks.COAL_ORE) ||
-                state.isOf(Blocks.COPPER_ORE) ||
-                state.isOf(Blocks.DIAMOND_ORE) ||
-                state.isOf(Blocks.REDSTONE_ORE) ||
-                state.isOf(Blocks.LAPIS_ORE);
+        return state.isIn(HomeTags.Blocks.ORE_BLOCKS);
     }
 
     public int getRange() {
