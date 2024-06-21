@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "homesteading:block/hazel_slab"
+    },
+    "type=double": {
+      "model": "homesteading:block/hazel_planks"
+    },
+    "type=top": {
+      "model": "homesteading:block/hazel_slab_top"
+    }
+  }
+}

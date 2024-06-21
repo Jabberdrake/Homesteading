@@ -3,19 +3,17 @@
  ##   ART   ##
 
 ITEMS:
-Raw Tin: _rofoo_
-Tin Ingot: _rofoo_
-Tin Nugget: _rofoo_
+Tin Ingots and related, all: by _rofoo_
 Peat Brick: base by Paperfish, edited by Jabberdrake
 
 BLOCKS:
-Tin Ore: _rofoo_
-Deepslate Tin Ore: _rofoo_
-Block of Tin: _rofoo_
-Block of Raw Tin: _rofoo_
-Peat: thecraftyghost
+Tin Ores and Blocks, all: by _rofoo_
+Peat: by thecraftyghost
+Calcite Block Set, all: by Mojang
+Hazel Block Set, all: by Yapetto
 
-TOOLS:
+WEAPONS & TOOLS:
+Crocodile Spear: 3d model by Lunar Studios, 2d sprite by
 Prospecting Picks, all: base by Peeko, edited by Jabberdrake
 
 FOODS:

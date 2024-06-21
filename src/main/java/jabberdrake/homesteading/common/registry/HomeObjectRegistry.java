@@ -5,8 +5,7 @@ import jabberdrake.homesteading.common.item.ProspectingPickItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
+import net.minecraft.block.*;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -35,8 +34,25 @@ public class HomeObjectRegistry {
     public static final Block RAW_TIN_BLOCK = register("raw_tin_block", new Block(FabricBlockSettings.copyOf(Blocks.RAW_COPPER_BLOCK)), true);
     public static final Block TIN_BLOCK = register("tin_block", new Block(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK)), true);
     public static final Block PEAT_BLOCK = register("peat_block", new Block(FabricBlockSettings.copyOf(Blocks.MUD)), true);
+    public static final Block CALCITE_STAIRS = register("calcite_stairs", new StairsBlock(Blocks.CALCITE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.CALCITE)), true);
+    public static final Block CALCITE_SLAB = register("calcite_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.CALCITE)), true);
+    public static final Block CALCITE_BUTTON = register("calcite_button", new ButtonBlock(FabricBlockSettings.copyOf(Blocks.CALCITE).collidable(false), BlockSetType.STONE, 10, false), true);
+    public static final Block CALCITE_PRESSURE_PLATE = register("calcite_pressure_plate", new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.copyOf(Blocks.CALCITE), BlockSetType.STONE), true);
+    public static final Block CALCITE_WALL = register("calcite_wall", new WallBlock(FabricBlockSettings.copyOf(Blocks.CALCITE)), true);
+    public static final Block HAZEL_PLANKS = register("hazel_planks", new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)), true);
+    public static final Block HAZEL_STAIRS = register("hazel_stairs", new StairsBlock(HAZEL_PLANKS.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)), true);
+    public static final Block HAZEL_SLAB = register("hazel_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)), true);
+    public static final Block HAZEL_BUTTON = register("hazel_button", new ButtonBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).collidable(false), BlockSetType.OAK, 10, true), true);
+    public static final Block HAZEL_PRESSURE_PLATE = register("hazel_pressure_plate", new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.copyOf(Blocks.OAK_PLANKS), BlockSetType.OAK), true);
+    public static final Block HAZEL_FENCE = register("hazel_fence", new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)), true);
+    public static final Block HAZEL_FENCE_GATE = register("hazel_fence_gate", new FenceGateBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS), WoodType.OAK), true);
+    public static final Block HAZEL_DOOR = register("hazel_door", new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).nonOpaque(), BlockSetType.OAK), true);
+    public static final Block HAZEL_TRAPDOOR = register("hazel_trapdoor", new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).nonOpaque(), BlockSetType.OAK), true);
 
-    //tools
+
+
+    //tools & weapons
+    public static final Item CROCODILE_SPEAR = register("crocodile_spear", new Item(new FabricItemSettings().maxCount(1)));
     public static final Item IRON_PROSPECTING_PICK = register("iron_prospecting_pick", new ProspectingPickItem(new FabricItemSettings(), 3));
 
     //foodstuffs
@@ -73,7 +89,6 @@ public class HomeObjectRegistry {
         GROUP = FabricItemGroup.builder().displayName(Text.translatable("itemGroup." + Homesteading.MOD_ID))
                 .icon(TIN_NUGGET::getDefaultStack).entries((displayContext, entries) -> {
                     ITEMS.keySet().forEach(entries::add);
-                    //BLOCKS.keySet().forEach(entries::add);
                 }).build();
 
         Homesteading.LOGGER.info("Registering tab group for " + Homesteading.MOD_ID);

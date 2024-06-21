@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "homesteading:block/hazel_planks",
+    "side": "homesteading:block/hazel_planks",
+    "top": "homesteading:block/hazel_planks"
+  }
+}
