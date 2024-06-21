@@ -59,7 +59,7 @@ public class ProspectingPickItem extends PickaxeItem {
             }
         }
 
-        context.getStack().damage(5, player,
+        context.getStack().damage(3, player,
                 playerEntity -> playerEntity.sendToolBreakStatus(playerEntity.getActiveHand()));
         return ActionResult.SUCCESS;
     }
