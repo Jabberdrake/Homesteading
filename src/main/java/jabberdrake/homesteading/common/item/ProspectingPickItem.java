@@ -1,15 +1,23 @@
 package jabberdrake.homesteading.common.item;
 
+import jabberdrake.homesteading.Homesteading;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
+import org.jetbrains.annotations.Nullable;
+
+import java.text.Normalizer;
+import java.util.List;
 
 public class ProspectingPickItem extends Item {
 
@@ -56,8 +64,10 @@ public class ProspectingPickItem extends Item {
         return ActionResult.SUCCESS;
     }
 
-    public int getRange() {
-        return range;
+    @Override
+    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+        tooltip.add(Text.translatable("tooltip." + Homesteading.MOD_ID + ".prospecting_pick_range", "§d" + range).formatted(Formatting.GRAY));
+        super.appendTooltip(stack, world, tooltip, context);
     }
 
     private boolean isOreBlock(BlockState state) {
@@ -67,5 +77,9 @@ public class ProspectingPickItem extends Item {
                 state.isOf(Blocks.DIAMOND_ORE) ||
                 state.isOf(Blocks.REDSTONE_ORE) ||
                 state.isOf(Blocks.LAPIS_ORE);
+    }
+
+    public int getRange() {
+        return range;
     }
 }

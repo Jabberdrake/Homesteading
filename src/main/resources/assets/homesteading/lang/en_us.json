@@ -14,5 +14,7 @@
 
   "item.homesteading.iron_prospecting_pick": "Iron Prospecting Pick",
 
-  "item.homesteading.chili_pepper": "Chili Pepper"
+  "item.homesteading.chili_pepper": "Chili Pepper",
+
+  "tooltip.homesteading.prospecting_pick_range": "Range: %s"
 }
