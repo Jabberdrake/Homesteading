@@ -2,11 +2,21 @@
 
  ##   ART   ##
 
-Tin Ore: _rofoo_
-Deepslate Tin Ore: _rofoo_
+ITEMS:
 Raw Tin: _rofoo_
 Tin Ingot: _rofoo_
 Tin Nugget: _rofoo_
+Peat Brick: base by Paperfish, edited by Jabberdrake
+
+BLOCKS:
+Tin Ore: _rofoo_
+Deepslate Tin Ore: _rofoo_
 Block of Tin: _rofoo_
 Block of Raw Tin: _rofoo_
+Peat: thecraftyghost
+
+TOOLS:
 Prospecting Picks, all: base by Peeko, edited by Jabberdrake
+
+FOODS:
+Chili Pepper: breton_aerouant

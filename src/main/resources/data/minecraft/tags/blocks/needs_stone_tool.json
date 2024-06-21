@@ -4,6 +4,7 @@
     "homesteading:tin_ore",
     "homesteading:deepslate_tin_ore",
     "homesteading:raw_tin_block",
-    "homesteading:tin_block"
+    "homesteading:tin_block",
+    "homesteading:peat_block"
   ]
 }

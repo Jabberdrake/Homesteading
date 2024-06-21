@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "homesteading:block/peat_block"
+    }
+  }
+}

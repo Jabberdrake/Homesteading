@@ -5,10 +5,14 @@
   "block.homesteading.deepslate_tin_ore": "Deepslate Tin Ore",
   "block.homesteading.raw_tin_block": "Block of Raw Tin",
   "block.homesteading.tin_block": "Block of Tin",
+  "block.homesteading.peat_block": "Peat",
 
   "item.homesteading.raw_tin": "Raw Tin",
   "item.homesteading.tin_ingot": "Tin Ingot",
   "item.homesteading.tin_nugget": "Tin Nugget",
+  "item.homesteading.peat_brick": "Peat Brick",
 
-  "item.homesteading.iron_prospecting_pick": "Iron Prospecting Pick"
+  "item.homesteading.iron_prospecting_pick": "Iron Prospecting Pick",
+
+  "item.homesteading.chili_pepper": "Chili Pepper"
 }

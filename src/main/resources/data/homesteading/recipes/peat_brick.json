@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "homesteading:peat_block"
+    }
+  ],
+  "result": {
+    "item": "homesteading:peat_brick",
+    "count": 4
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "homesteading:peat_brick"
+    }
+  },
+  "result": {
+    "item": "homesteading:peat_block"
+  }
+}
