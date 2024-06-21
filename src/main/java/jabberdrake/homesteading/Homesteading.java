@@ -1,10 +1,9 @@
 package jabberdrake.homesteading;
-
-import jabberdrake.homesteading.common.block.ModBlocks;
-import jabberdrake.homesteading.common.registry.ModItemGroups;
-import jabberdrake.homesteading.common.registry.ModItems;
+import jabberdrake.homesteading.common.registry.HomeObjectRegistry;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.registry.FuelRegistry;
+import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,8 +18,13 @@ public class Homesteading implements ModInitializer {
 		// Proceed with mild caution.
 
 		LOGGER.info("Initializing!");
-		ModItems.registerModItems();
-		ModItemGroups.registerItemGroups();
-		ModBlocks.registerModBlocks();
+		HomeObjectRegistry.init();
+
+		FuelRegistry.INSTANCE.add(HomeObjectRegistry.PEAT_BRICK, 400);
+		FuelRegistry.INSTANCE.add(HomeObjectRegistry.PEAT_BLOCK, 1600);
+	}
+
+	public static Identifier createIdentifier(String value) {
+		return new Identifier(MOD_ID, value);
 	}
 }
