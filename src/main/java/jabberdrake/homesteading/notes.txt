@@ -9,3 +9,4 @@ Tin Ingot: _rofoo_
 Tin Nugget: _rofoo_
 Block of Tin: _rofoo_
 Block of Raw Tin: _rofoo_
+Prospecting Picks, all: base by Peeko, edited by Jabberdrake

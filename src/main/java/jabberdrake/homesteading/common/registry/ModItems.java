@@ -1,6 +1,7 @@
 package jabberdrake.homesteading.common.registry;
 
 import jabberdrake.homesteading.Homesteading;
+import jabberdrake.homesteading.common.item.ProspectingPickItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -15,6 +16,8 @@ public class ModItems {
     public static final Item RAW_TIN = registerItem("raw_tin", new Item(new FabricItemSettings()));
     public static final Item TIN_INGOT = registerItem("tin_ingot", new Item(new FabricItemSettings()));
     public static final Item TIN_NUGGET = registerItem("tin_nugget", new Item(new FabricItemSettings()));
+
+    public static final Item IRON_PROSPECTING_PICK = registerItem("iron_prospecting_pick", new ProspectingPickItem(new FabricItemSettings(), 3));
 
     private static void addItemsToIngredientTabItemGroup(FabricItemGroupEntries entries) {
         // all mod items are to be added to a custom tab group

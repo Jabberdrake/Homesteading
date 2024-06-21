@@ -24,6 +24,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.DEEPSLATE_TIN_ORE);
                         entries.add(ModBlocks.RAW_TIN_BLOCK);
                         entries.add(ModBlocks.TIN_BLOCK);
+                        entries.add(ModItems.IRON_PROSPECTING_PICK);
                     }).build()
     );
 
