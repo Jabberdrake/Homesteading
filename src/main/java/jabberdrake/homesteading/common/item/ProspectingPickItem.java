@@ -7,9 +7,8 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemUsageContext;
+import net.minecraft.item.*;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Formatting;
@@ -20,12 +19,12 @@ import org.jetbrains.annotations.Nullable;
 import java.text.Normalizer;
 import java.util.List;
 
-public class ProspectingPickItem extends Item {
+public class ProspectingPickItem extends PickaxeItem {
 
     private int range = 3;
 
-    public ProspectingPickItem(Settings settings, int range) {
-        super(settings);
+    public ProspectingPickItem(ToolMaterial material, int attackDamage, float attackSpeed, Item.Settings settings, int range) {
+        super(material, attackDamage, attackSpeed, settings);
         this.range = range;
     }
 
@@ -60,7 +59,7 @@ public class ProspectingPickItem extends Item {
             }
         }
 
-        context.getStack().damage(1, player,
+        context.getStack().damage(5, player,
                 playerEntity -> playerEntity.sendToolBreakStatus(playerEntity.getActiveHand()));
         return ActionResult.SUCCESS;
     }

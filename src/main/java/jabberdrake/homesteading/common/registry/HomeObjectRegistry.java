@@ -12,6 +12,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
+import javax.tools.Tool;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -53,7 +54,7 @@ public class HomeObjectRegistry {
 
     //tools & weapons
     public static final Item CROCODILE_SPEAR = register("crocodile_spear", new Item(new FabricItemSettings().maxCount(1)));
-    public static final Item IRON_PROSPECTING_PICK = register("iron_prospecting_pick", new ProspectingPickItem(new FabricItemSettings(), 3));
+    public static final Item IRON_PROSPECTING_PICK = register("iron_prospecting_pick", new ProspectingPickItem(ToolMaterials.IRON, 2, 2f, new FabricItemSettings(), 3));
 
     //foodstuffs
     public static final Item CHILI_PEPPER = register("chili_pepper", new Item(new FabricItemSettings().food(HomeFoodComponents.CHILI_PEPPER)));

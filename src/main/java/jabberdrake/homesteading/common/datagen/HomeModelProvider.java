@@ -43,7 +43,7 @@ public class HomeModelProvider extends FabricModelProvider {
         itemModelGenerator.register(HomeObjectRegistry.RAW_TIN, Models.GENERATED);
         itemModelGenerator.register(HomeObjectRegistry.TIN_INGOT, Models.GENERATED);
         itemModelGenerator.register(HomeObjectRegistry.TIN_NUGGET, Models.GENERATED);
-        itemModelGenerator.register(HomeObjectRegistry.IRON_PROSPECTING_PICK, Models.GENERATED);
+        itemModelGenerator.register(HomeObjectRegistry.IRON_PROSPECTING_PICK, Models.HANDHELD);
         itemModelGenerator.register(HomeObjectRegistry.CHILI_PEPPER, Models.GENERATED);
         itemModelGenerator.register(HomeObjectRegistry.PEAT_BRICK, Models.GENERATED);
     }
