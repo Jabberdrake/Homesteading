@@ -18,7 +18,7 @@ public abstract class ItemRendererMixin {
     @ModifyVariable(method = "renderItem", at = @At(value = "HEAD"), argsOnly = true)
     public BakedModel useCrocodileSpearModel(BakedModel value, ItemStack stack, ModelTransformationMode renderMode, boolean leftHanded, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay) {
         if (stack.isOf(HomeObjectRegistry.CROCODILE_SPEAR) && renderMode != ModelTransformationMode.GUI) {
-            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(Homesteading.MOD_ID, "crocodile_spear_3d", "inventory"));
+            return ((ItemRendererAccessor) this).homesteading$getModels().getModelManager().getModel(new ModelIdentifier(Homesteading.MOD_ID, "crocodile_spear_3d", "inventory"));
         }
         return value;
     }

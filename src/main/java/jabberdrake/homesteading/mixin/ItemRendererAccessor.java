@@ -9,5 +9,5 @@ import org.spongepowered.asm.mixin.gen.Accessor;
 public interface ItemRendererAccessor {
 
     @Accessor("models")
-    ItemModels mccourse$getModels();
+    ItemModels homesteading$getModels();
 }
