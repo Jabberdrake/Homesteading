@@ -1,0 +1,6 @@
+{
+  "parent": "homesteading:block/templates/crucible_base",
+  "textures": {
+    "9": "homesteading:block/crucible_9"
+  }
+}

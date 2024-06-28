@@ -17,7 +17,7 @@ public class HomeTags {
     }
 
     public static class Items {
-        private static TagKey<Item> CRUCIBLE_VALID = createTag("crucible_valid");
+        public static TagKey<Item> CRUCIBLE_VALID = createTag("crucible_valid");
 
         private static TagKey<Item> createTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, Homesteading.createIdentifier(name));

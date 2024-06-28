@@ -51,7 +51,10 @@ public class HomeRecipeProvider extends FabricRecipeProvider {
         offer3x3ReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, HomeObjectRegistry.TIN_INGOT, RecipeCategory.DECORATIONS, HomeObjectRegistry.TIN_BLOCK, null, null);
 
         //CRAFTING: Tin Ingot (FROM Tin Nugget) (and vice-versa)
-        offer3x3ReversibleCompactingRecipes(exporter, RecipeCategory.MISC, HomeObjectRegistry.TIN_NUGGET, RecipeCategory.DECORATIONS, HomeObjectRegistry.TIN_INGOT, null, null);
+        offer3x3ReversibleCompactingRecipes(exporter, RecipeCategory.MISC, HomeObjectRegistry.TIN_NUGGET, RecipeCategory.MISC, HomeObjectRegistry.TIN_INGOT, null, null);
+
+        //CRAFTING: Copper Ingot (FROM Copper Nugget) (and vice-versa)
+        offer3x3ReversibleCompactingRecipes(exporter, RecipeCategory.MISC, HomeObjectRegistry.COPPER_NUGGET, RecipeCategory.MISC, Items.COPPER_INGOT, null, null);
 
         //CRAFTING: Iron Prospecting Pick
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, HomeObjectRegistry.IRON_PROSPECTING_PICK, 1)
