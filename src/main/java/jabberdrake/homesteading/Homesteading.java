@@ -1,4 +1,6 @@
 package jabberdrake.homesteading;
+import jabberdrake.homesteading.common.recipe.crucible.CrucibleRecipe;
+import jabberdrake.homesteading.common.recipe.crucible.CrucibleRecipeSerializer;
 import jabberdrake.homesteading.common.registry.HomeBlockEntities;
 import jabberdrake.homesteading.common.registry.HomeObjectRegistry;
 import net.fabricmc.api.ModInitializer;

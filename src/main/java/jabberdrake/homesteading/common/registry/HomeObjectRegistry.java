@@ -1,6 +1,7 @@
 package jabberdrake.homesteading.common.registry;
 
 import jabberdrake.homesteading.Homesteading;
+import jabberdrake.homesteading.common.block.CrucibleBlock;
 import jabberdrake.homesteading.common.item.ProspectingPickItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
@@ -12,9 +13,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
-import java.util.ArrayList;
 import java.util.LinkedHashMap;
-import java.util.List;
 import java.util.Map;
 
 public class HomeObjectRegistry {
@@ -76,7 +75,6 @@ public class HomeObjectRegistry {
 
     // Blocks: Functional
     public static final Block CRUCIBLE = registerBlock("crucible", new CrucibleBlock(FabricBlockSettings.copyOf(Blocks.DECORATED_POT)), "functional",true);
-
 
     // Items: Functional
 
@@ -140,14 +138,14 @@ public class HomeObjectRegistry {
     public static final Item RAW_TIN = registerItem("raw_tin", new Item(new FabricItemSettings()), "ingredients");
     public static final Item TIN_INGOT = registerItem("tin_ingot", new Item(new FabricItemSettings()), "ingredients");
     public static final Item TIN_NUGGET = registerItem("tin_nugget", new Item(new FabricItemSettings()), "ingredients");
-    public static final Item COPPER_NUGGER = registerItem("copper_nugget", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item COPPER_NUGGET = registerItem("copper_nugget", new Item(new FabricItemSettings()), "ingredients");
 
     // Items: Ingredients, Other
     public static final Item PEAT_BRICK = registerItem("peat_brick", new Item(new FabricItemSettings()), "ingredients");
 
-    // ######################
+    // ###############
     // # Group: MISC #
-    // ######################
+    // ###############
 
     // Blocks: Misc
 

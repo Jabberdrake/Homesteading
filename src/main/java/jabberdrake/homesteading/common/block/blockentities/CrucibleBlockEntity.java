@@ -2,6 +2,7 @@ package jabberdrake.homesteading.common.block.blockentities;
 
 import jabberdrake.homesteading.Homesteading;
 import jabberdrake.homesteading.common.recipe.crucible.CrucibleRecipe;
+import jabberdrake.homesteading.common.registry.HomeBlockEntities;
 import jabberdrake.homesteading.common.registry.HomeObjectRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -24,7 +25,7 @@ public class CrucibleBlockEntity extends BlockEntity {
     private DefaultedList<ItemStack> inventory;
 
     public CrucibleBlockEntity(BlockPos pos, BlockState state) {
-        super(HomeObjectRegistry.CRUCIBLE_BLOCK_ENTITY, pos, state);
+        super(HomeBlockEntities.CRUCIBLE_BLOCK_ENTITY, pos, state);
         this.inventory = DefaultedList.ofSize(9, ItemStack.EMPTY);
     }
 

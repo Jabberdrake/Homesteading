@@ -18,7 +18,7 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-public class CrucibleBlock  extends BlockWithEntity {
+public class CrucibleBlock extends BlockWithEntity {
     public static final IntProperty LEVEL;
 
     protected final VoxelShape SHAPE = Block.createCuboidShape(4.0, 0.0, 4.0, 12.0, 10.0, 12.0);
