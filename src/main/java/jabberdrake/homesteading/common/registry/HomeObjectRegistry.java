@@ -1,11 +1,16 @@
 package jabberdrake.homesteading.common.registry;
 
 import jabberdrake.homesteading.Homesteading;
+import jabberdrake.homesteading.common.block.CrucibleBlock;
+import jabberdrake.homesteading.common.block.blockentities.CrucibleBlockEntity;
 import jabberdrake.homesteading.common.item.ProspectingPickItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.*;
+import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -27,6 +32,7 @@ public class HomeObjectRegistry {
     public static final Item TIN_INGOT = register("tin_ingot", new Item(new FabricItemSettings()));
     public static final Item TIN_NUGGET = register("tin_nugget", new Item(new FabricItemSettings()));
     public static final Item PEAT_BRICK = register("peat_brick", new Item(new FabricItemSettings()));
+    public static final Item COPPER_NUGGET = register("copper_nugget", new Item(new FabricItemSettings()));
 
 
     //blocks
@@ -50,7 +56,8 @@ public class HomeObjectRegistry {
     public static final Block HAZEL_DOOR = register("hazel_door", new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).nonOpaque(), BlockSetType.OAK), true);
     public static final Block HAZEL_TRAPDOOR = register("hazel_trapdoor", new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).nonOpaque(), BlockSetType.OAK), true);
 
-
+    //Functional Blocks
+    public static final Block CRUCIBLE = register("crucible", new CrucibleBlock(FabricBlockSettings.copyOf(Blocks.DECORATED_POT)), true);
 
     //tools & weapons
     public static final Item CROCODILE_SPEAR = register("crocodile_spear", new Item(new FabricItemSettings().maxCount(1)));
@@ -58,6 +65,9 @@ public class HomeObjectRegistry {
 
     //foodstuffs
     public static final Item CHILI_PEPPER = register("chili_pepper", new Item(new FabricItemSettings().food(HomeFoodComponents.CHILI_PEPPER)));
+
+    //Block Entities
+    public static final BlockEntityType<CrucibleBlockEntity> CRUCIBLE_BLOCK_ENTITY = register("crucible", FabricBlockEntityTypeBuilder.create(CrucibleBlockEntity::new));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Homesteading.createIdentifier(name), item);
@@ -84,6 +94,10 @@ public class HomeObjectRegistry {
     private static <T extends Item> T register(String name, Item item) {
         ITEMS.put(item, Homesteading.createIdentifier(name));
         return (T) item;
+    }
+
+    private static <T extends BlockEntity> BlockEntityType<T> register(String name, FabricBlockEntityTypeBuilder<T> builder) {
+        return Registry.register(Registries.BLOCK_ENTITY_TYPE, Homesteading.createIdentifier(name), builder.build());
     }
 
     public static void init() {

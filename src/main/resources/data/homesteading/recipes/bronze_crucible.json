@@ -1,0 +1,17 @@
+{
+  "type": "homesteading:crucible",
+  "input": [
+    {
+      "id": "homesteading:copper_nugget",
+      "Count": 6
+    },
+    {
+      "id": "homesteading:tin_nugget",
+      "Count": 3
+    }
+  ],
+  "output": {
+    "id": "minecraft:amethyst_shard",
+    "Count": 1
+  }
+}

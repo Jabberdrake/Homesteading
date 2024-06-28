@@ -15,6 +15,7 @@ public class HomesteadingClient implements ClientModInitializer {
         Homesteading.LOGGER.info("Initializing client for " + Homesteading.MOD_ID);
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(),
                 HomeObjectRegistry.HAZEL_DOOR,
-                HomeObjectRegistry.HAZEL_TRAPDOOR);
+                HomeObjectRegistry.HAZEL_TRAPDOOR,
+                HomeObjectRegistry.CRUCIBLE);
     }
 }

@@ -45,6 +45,7 @@ public class HomeLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(HomeObjectRegistry.HAZEL_FENCE_GATE);
         addDrop(HomeObjectRegistry.HAZEL_DOOR, doorDrops(HomeObjectRegistry.HAZEL_DOOR));
         addDrop(HomeObjectRegistry.HAZEL_TRAPDOOR);
+        addDrop(HomeObjectRegistry.CRUCIBLE);
     }
 
     public LootTable.Builder copperLikeOreDrops(Block drop, Item item, float minAmount, float maxAmount) {

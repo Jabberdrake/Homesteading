@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "crucible_level=0": {
+      "model": "homesteading:block/crucible"
+    },
+    "crucible_level=1": {
+      "model": "homesteading:block/crucible_1"
+    },
+    "crucible_level=2": {
+      "model": "homesteading:block/crucible_2"
+    },
+    "crucible_level=3": {
+      "model": "homesteading:block/crucible_3"
+    },
+    "crucible_level=4": {
+      "model": "homesteading:block/crucible_4"
+    },
+    "crucible_level=5": {
+      "model": "homesteading:block/crucible_5"
+    },
+    "crucible_level=6": {
+      "model": "homesteading:block/crucible_6"
+    },
+    "crucible_level=7": {
+      "model": "homesteading:block/crucible_7"
+    },
+    "crucible_level=8": {
+      "model": "homesteading:block/crucible_8"
+    },
+    "crucible_level=9": {
+      "model": "homesteading:block/crucible_9"
+    }
+  }
+}
