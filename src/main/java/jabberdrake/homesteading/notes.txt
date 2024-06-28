@@ -3,18 +3,35 @@
  ##   ART   ##
 
 ITEMS:
-Tin Ingots and related, all: by _rofoo_
-Peat Brick: base by Paperfish, edited by Jabberdrake
+Tin Set, all: by _rofoo_
+Zinc Set, all: by CodenamedSuper
+Silver Set, all: by farcr
+Bronze Set, all: by Yapetto
+Brass Set, all: by CodenamedSuper
+Ruby: by thecraftyghost
+Peat Brick: by breton_aerouant
+Ash: by i forgor
 
 BLOCKS:
 Tin Ores and Blocks, all: by _rofoo_
-Peat: by thecraftyghost
-Calcite Block Set, all: by Mojang
+Zinc Ores and Blocks, all: by CodenamedSuper
+Silver Ores and Blocks, all: by farcr
+Block of Bronze: by Yapetto
+Block of Brass: by CodenamedSuper
+Ruby Ores and Blocks: by thecraftyghost
 Hazel Block Set, all: by Yapetto
+Olive Block Set, all: by Yapetto
+Willow Block Set, all: by Yapetto
+Sycamore Block Set, all: by Yapetto
+Redwood Block Set, all: by Yapetto
+Peat: by breton_aerouant
+Calcite Block Set, all: by Mojang
+Limestone: by imnotseby
+Ash Block: by i forgor
 
 WEAPONS & TOOLS:
-Crocodile Spear: 3d model by Lunar Studios, 2d sprite by
+Crocodile Spear: 3d model by Lunar Studios, 2d sprite by Jabberdrake
 Prospecting Picks, all: base by Peeko, edited by Jabberdrake
 
 FOODS:
-Chili Pepper: breton_aerouant
+Chili Pepper: by breton_aerouant
