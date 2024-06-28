@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.block.Block;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.ItemTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -44,6 +45,14 @@ public class HomeBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         // [Vanilla] A set of all wall blocks.
         getOrCreateTagBuilder(BlockTags.WALLS)
                 .add(HomeObjectRegistry.CALCITE_WALL);
+
+        // [Vanilla] A set of all flammable log blocks.
+        getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
+                .add(HomeObjectRegistry.HAZEL_LOG)
+                .add(HomeObjectRegistry.HAZEL_WOOD)
+                .add(HomeObjectRegistry.STRIPPED_HAZEL_LOG)
+                .add(HomeObjectRegistry.STRIPPED_HAZEL_WOOD);
+
 
         // [Homesteading] A set of all vanilla or Homesteading ore blocks.
         getOrCreateTagBuilder(HomeTags.Blocks.ORE_BLOCKS)

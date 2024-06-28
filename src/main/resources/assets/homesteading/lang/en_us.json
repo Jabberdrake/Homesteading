@@ -1,16 +1,23 @@
 {
-  "itemGroup.homesteading": "Homesteading",
+  "homesteading.comment.section0": "CREATIVE TABS",
+  "itemGroup.homesteading.building": "Homesteading: Building",
+  "itemGroup.homesteading.functional": "Homesteading: Functional",
+  "itemGroup.homesteading.natural": "Homesteading: Natural",
+  "itemGroup.homesteading.equipment": "Homesteading: Equipment",
+  "itemGroup.homesteading.foodstuffs": "Homesteading: Foodstuffs",
+  "itemGroup.homesteading.ingredients": "Homesteading: Ingredients",
+  "itemGroup.homesteading.misc": "Homesteading: Misc",
 
-  "block.homesteading.tin_ore": "Tin Ore",
-  "block.homesteading.deepslate_tin_ore": "Deepslate Tin Ore",
-  "block.homesteading.raw_tin_block": "Block of Raw Tin",
-  "block.homesteading.tin_block": "Block of Tin",
-  "block.homesteading.peat_block": "Peat",
+  "homesteading.comment.section1": "BLOCKS: STONE",
   "block.homesteading.calcite_stairs": "Calcite Stairs",
   "block.homesteading.calcite_slab": "Calcite Slab",
   "block.homesteading.calcite_button": "Calcite Button",
   "block.homesteading.calcite_pressure_plate": "Calcite Pressure Plate",
   "block.homesteading.calcite_wall": "Calcite Wall",
+
+  "homesteading.comment.section2": "BLOCKS: REFINED WOOD",
+  "block.homesteading.stripped_hazel_log": "Stripped Hazel Log",
+  "block.homesteading.stripped_hazel_wood": "Stripped Hazel Wood",
   "block.homesteading.hazel_planks": "Hazel Planks",
   "block.homesteading.hazel_stairs": "Hazel Stairs",
   "block.homesteading.hazel_slab": "Hazel Slab",
@@ -21,15 +28,72 @@
   "block.homesteading.hazel_door": "Hazel Door",
   "block.homesteading.hazel_trapdoor": "Hazel Trapdoor",
 
+  "homesteading.comment.section3": "BLOCKS: ORES AND METALS",
+  "block.homesteading.tin_ore": "Tin Ore",
+  "block.homesteading.deepslate_tin_ore": "Deepslate Tin Ore",
+  "block.homesteading.raw_tin_block": "Block of Raw Tin",
+  "block.homesteading.tin_block": "Block of Tin",
+
+  "homesteading.comment.section4": "BLOCKS: BUILDING, OTHER",
+
+  "homesteading.comment.section5": "BLOCKS: FUNCTIONAL",
+  "block.homesteading.crucible": "Crucible",
+
+  "homesteading.comment.section6": "ITEMS: FUNCTIONAL",
+
+  "homesteading.comment.section7": "BLOCKS: SOIL & SIMILAR",
+  "block.homesteading.peat_block": "Peat",
+
+  "homesteading.comment.section8": "BLOCKS: LOGS & LEAVES",
+  "block.homesteading.hazel_log": "Hazel Log",
+  "block.homesteading.hazel_wood": "Hazel Wood",
+  "block.homesteading.hazel_leaves": "Hazel Leaves",
+
+  "homesteading.comment.section9": "BLOCKS: NATURAL, OTHER",
+
+  "homesteading.comment.section10": "ITEMS: SEEDS",
+
+  "homesteading.comment.section11": "ITEMS: SAPLINGS",
+
+  "homesteading.comment.section12": "ITEMS: PLANTS & FLOWERS",
+
+  "homesteading.comment.section13": "ITEMS: NATURAL, OTHER",
+
+  "homesteading.comment.section14": "ITEMS: TOOLS",
+  "item.homesteading.iron_prospecting_pick": "Iron Prospecting Pick",
+
+  "homesteading.comment.section15": "ITEMS: WEAPONS",
+
+  "homesteading.comment.section16": "ITEMS: PARTS",
+
+  "homesteading.comment.section17": "ITEMS: ARMOR",
+
+  "homesteading.comment.section18": "ITEMS: EQUIPMENT, OTHER",
+
+  "homesteading.comment.section19": "ITEMS: CROPS",
+  "item.homesteading.chili_pepper": "Chili Pepper",
+
+  "homesteading.comment.section20": "ITEMS: FOOD",
+
+  "homesteading.comment.section21": "ITEMS: DISHES",
+
+  "homesteading.comment.section22": "ITEMS: DRINKS",
+
+  "homesteading.comment.section23": "ITEMS: FOODSTUFFS, OTHER",
+
+  "homesteading.comment.section24": "ITEMS: METALS",
   "item.homesteading.raw_tin": "Raw Tin",
   "item.homesteading.tin_ingot": "Tin Ingot",
   "item.homesteading.tin_nugget": "Tin Nugget",
+
+  "homesteading.comment.section25": "ITEMS: INGREDIENTS, OTHER",
   "item.homesteading.peat_brick": "Peat Brick",
 
+  "homesteading.comment.section26": "BLOCKS: MISC",
+
+  "homesteading.comment.section27": "ITEMS: MISC",
   "item.homesteading.crocodile_spear": "Crocodile Spear",
-  "item.homesteading.iron_prospecting_pick": "Iron Prospecting Pick",
 
-  "item.homesteading.chili_pepper": "Chili Pepper",
-
+  "homesteading.comment.section28": "TOOLTIPS",
   "tooltip.homesteading.prospecting_pick_range": "Range: %s"
 }

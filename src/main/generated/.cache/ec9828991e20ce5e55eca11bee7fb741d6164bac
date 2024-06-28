@@ -1,6 +1,7 @@
-// 1.20.1	2024-06-21T23:45:45.1187226	Homesteading/Tags for minecraft:block
-f4300b9a11dda595133b91a200cdd01c00750b89 data\minecraft\tags\blocks\mineable\pickaxe.json
+// 1.20.1	2024-06-28T21:50:21.7458213	Homesteading/Tags for minecraft:block
+32a273315658f7db2ae401b7d20d015d482c5fae data\minecraft\tags\blocks\logs_that_burn.json
 f4300b9a11dda595133b91a200cdd01c00750b89 data\minecraft\tags\blocks\needs_stone_tool.json
+f4300b9a11dda595133b91a200cdd01c00750b89 data\minecraft\tags\blocks\mineable\pickaxe.json
 160602cc9ee5c1bf98809163889606a476322c9f data\minecraft\tags\blocks\fence_gates.json
 8b493b8cc4fd66dffe82208f9eca07155cb107a3 data\minecraft\tags\blocks\walls.json
 1a027c3e0444123b16f6ab70e895ddf42fcda4a3 data\homesteading\tags\blocks\ore_blocks.json

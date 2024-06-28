@@ -28,14 +28,15 @@ public class HomeLootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
-        addDrop(HomeObjectRegistry.TIN_ORE, copperLikeOreDrops(HomeObjectRegistry.TIN_ORE, HomeObjectRegistry.RAW_TIN, 1, 3));
-        addDrop(HomeObjectRegistry.RAW_TIN_BLOCK);
-        addDrop(HomeObjectRegistry.TIN_BLOCK);
-        addDrop(HomeObjectRegistry.PEAT_BLOCK, drops(HomeObjectRegistry.PEAT_BRICK, UniformLootNumberProvider.create(4, 4)));
+        // Blocks: Stone
         addDrop(HomeObjectRegistry.CALCITE_STAIRS);
         addDrop(HomeObjectRegistry.CALCITE_SLAB, slabDrops(HomeObjectRegistry.CALCITE_SLAB));
         addDrop(HomeObjectRegistry.CALCITE_BUTTON);
         addDrop(HomeObjectRegistry.CALCITE_PRESSURE_PLATE);
+
+        // Blocks: Refined Wood
+        addDrop(HomeObjectRegistry.STRIPPED_HAZEL_LOG);
+        addDrop(HomeObjectRegistry.STRIPPED_HAZEL_WOOD);
         addDrop(HomeObjectRegistry.HAZEL_PLANKS);
         addDrop(HomeObjectRegistry.HAZEL_STAIRS);
         addDrop(HomeObjectRegistry.HAZEL_SLAB, slabDrops(HomeObjectRegistry.HAZEL_SLAB));
@@ -45,6 +46,29 @@ public class HomeLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(HomeObjectRegistry.HAZEL_FENCE_GATE);
         addDrop(HomeObjectRegistry.HAZEL_DOOR, doorDrops(HomeObjectRegistry.HAZEL_DOOR));
         addDrop(HomeObjectRegistry.HAZEL_TRAPDOOR);
+
+        // Blocks: Ores and Metals
+        addDrop(HomeObjectRegistry.TIN_ORE, copperLikeOreDrops(HomeObjectRegistry.TIN_ORE, HomeObjectRegistry.RAW_TIN, 1, 3));
+        addDrop(HomeObjectRegistry.DEEPSLATE_TIN_ORE, copperLikeOreDrops(HomeObjectRegistry.DEEPSLATE_TIN_ORE, HomeObjectRegistry.RAW_TIN, 1, 3));
+        addDrop(HomeObjectRegistry.RAW_TIN_BLOCK);
+        addDrop(HomeObjectRegistry.TIN_BLOCK);
+
+        // Blocks: Building, Other
+
+        // Blocks: Functional
+
+        // Blocks: Soil & Similar
+        addDrop(HomeObjectRegistry.PEAT_BLOCK, drops(HomeObjectRegistry.PEAT_BRICK, UniformLootNumberProvider.create(4, 4)));
+
+        // Blocks: Logs & Leaves
+        addDrop(HomeObjectRegistry.HAZEL_LOG);
+        addDrop(HomeObjectRegistry.HAZEL_WOOD);
+        addDrop(HomeObjectRegistry.HAZEL_LEAVES, leavesDrops(HomeObjectRegistry.HAZEL_LEAVES, HomeObjectRegistry.PEAT_BLOCK, 0.0025f)); //TODO
+
+
+        // Blocks: Natural, Other
+
+        // Blocks: Misc
     }
 
     public LootTable.Builder copperLikeOreDrops(Block drop, Item item, float minAmount, float maxAmount) {

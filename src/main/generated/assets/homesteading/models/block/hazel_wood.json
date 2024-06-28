@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "homesteading:block/hazel_log",
+    "side": "homesteading:block/hazel_log"
+  }
+}

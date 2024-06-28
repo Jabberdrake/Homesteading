@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "homesteading:hazel_log",
+    "homesteading:hazel_wood",
+    "homesteading:stripped_hazel_log",
+    "homesteading:stripped_hazel_wood"
+  ]
+}
