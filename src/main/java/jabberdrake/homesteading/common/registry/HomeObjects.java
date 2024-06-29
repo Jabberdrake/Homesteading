@@ -16,7 +16,7 @@ import net.minecraft.util.Identifier;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class HomeObjectRegistry {
+public class HomeObjects {
 
     private static final Map<Block, Identifier> BLOCKS = new LinkedHashMap<>();
     private static final Map<Item, Identifier> ITEMS = new LinkedHashMap<>();

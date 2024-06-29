@@ -3,8 +3,6 @@ package jabberdrake.homesteading.common.block.blockentities;
 import jabberdrake.homesteading.Homesteading;
 import jabberdrake.homesteading.common.recipe.crucible.CrucibleRecipe;
 import jabberdrake.homesteading.common.registry.HomeBlockEntities;
-import jabberdrake.homesteading.common.registry.HomeObjectRegistry;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.BlockEntity;

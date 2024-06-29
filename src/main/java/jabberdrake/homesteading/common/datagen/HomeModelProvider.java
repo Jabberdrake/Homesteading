@@ -1,6 +1,6 @@
 package jabberdrake.homesteading.common.datagen;
 
-import jabberdrake.homesteading.common.registry.HomeObjectRegistry;
+import jabberdrake.homesteading.common.registry.HomeObjects;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.Blocks;
@@ -18,40 +18,40 @@ public class HomeModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         // Blocks: Stone
         BlockStateModelGenerator.BlockTexturePool calcitePool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.CALCITE);
-        calcitePool.stairs(HomeObjectRegistry.CALCITE_STAIRS);
-        calcitePool.slab(HomeObjectRegistry.CALCITE_SLAB);
-        calcitePool.button(HomeObjectRegistry.CALCITE_BUTTON);
-        calcitePool.pressurePlate(HomeObjectRegistry.CALCITE_PRESSURE_PLATE);
-        calcitePool.wall(HomeObjectRegistry.CALCITE_WALL);
+        calcitePool.stairs(HomeObjects.CALCITE_STAIRS);
+        calcitePool.slab(HomeObjects.CALCITE_SLAB);
+        calcitePool.button(HomeObjects.CALCITE_BUTTON);
+        calcitePool.pressurePlate(HomeObjects.CALCITE_PRESSURE_PLATE);
+        calcitePool.wall(HomeObjects.CALCITE_WALL);
 
         // Blocks: Refined Wood
-        blockStateModelGenerator.registerLog(HomeObjectRegistry.STRIPPED_HAZEL_LOG).log(HomeObjectRegistry.STRIPPED_HAZEL_LOG).wood(HomeObjectRegistry.STRIPPED_HAZEL_WOOD);
-        BlockStateModelGenerator.BlockTexturePool hazelPlanksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(HomeObjectRegistry.HAZEL_PLANKS);
-        hazelPlanksPool.stairs(HomeObjectRegistry.HAZEL_STAIRS);
-        hazelPlanksPool.slab(HomeObjectRegistry.HAZEL_SLAB);
-        hazelPlanksPool.button(HomeObjectRegistry.HAZEL_BUTTON);
-        hazelPlanksPool.pressurePlate(HomeObjectRegistry.HAZEL_PRESSURE_PLATE);
-        hazelPlanksPool.fence(HomeObjectRegistry.HAZEL_FENCE);
-        hazelPlanksPool.fenceGate(HomeObjectRegistry.HAZEL_FENCE_GATE);
-        blockStateModelGenerator.registerDoor(HomeObjectRegistry.HAZEL_DOOR);
-        blockStateModelGenerator.registerTrapdoor(HomeObjectRegistry.HAZEL_TRAPDOOR);
+        blockStateModelGenerator.registerLog(HomeObjects.STRIPPED_HAZEL_LOG).log(HomeObjects.STRIPPED_HAZEL_LOG).wood(HomeObjects.STRIPPED_HAZEL_WOOD);
+        BlockStateModelGenerator.BlockTexturePool hazelPlanksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(HomeObjects.HAZEL_PLANKS);
+        hazelPlanksPool.stairs(HomeObjects.HAZEL_STAIRS);
+        hazelPlanksPool.slab(HomeObjects.HAZEL_SLAB);
+        hazelPlanksPool.button(HomeObjects.HAZEL_BUTTON);
+        hazelPlanksPool.pressurePlate(HomeObjects.HAZEL_PRESSURE_PLATE);
+        hazelPlanksPool.fence(HomeObjects.HAZEL_FENCE);
+        hazelPlanksPool.fenceGate(HomeObjects.HAZEL_FENCE_GATE);
+        blockStateModelGenerator.registerDoor(HomeObjects.HAZEL_DOOR);
+        blockStateModelGenerator.registerTrapdoor(HomeObjects.HAZEL_TRAPDOOR);
 
         // Blocks: Ores and Metals
-        blockStateModelGenerator.registerSimpleCubeAll(HomeObjectRegistry.TIN_ORE);
-        blockStateModelGenerator.registerSimpleCubeAll(HomeObjectRegistry.DEEPSLATE_TIN_ORE);
-        blockStateModelGenerator.registerSimpleCubeAll(HomeObjectRegistry.RAW_TIN_BLOCK);
-        blockStateModelGenerator.registerSimpleCubeAll(HomeObjectRegistry.TIN_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.TIN_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.DEEPSLATE_TIN_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.RAW_TIN_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.TIN_BLOCK);
 
         // Blocks: Building, Other
 
         // Blocks: Functional
 
         // Blocks: Soil & Similar
-        blockStateModelGenerator.registerSimpleCubeAll(HomeObjectRegistry.PEAT_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.PEAT_BLOCK);
 
         // Blocks: Logs & Leaves
-        blockStateModelGenerator.registerLog(HomeObjectRegistry.HAZEL_LOG).log(HomeObjectRegistry.HAZEL_LOG).wood(HomeObjectRegistry.HAZEL_WOOD);
-        blockStateModelGenerator.registerSimpleCubeAll(HomeObjectRegistry.HAZEL_LEAVES);
+        blockStateModelGenerator.registerLog(HomeObjects.HAZEL_LOG).log(HomeObjects.HAZEL_LOG).wood(HomeObjects.HAZEL_WOOD);
+        blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.HAZEL_LEAVES);
 
         // Blocks: Natural, Other
 
@@ -69,7 +69,7 @@ public class HomeModelProvider extends FabricModelProvider {
         // Items: Natural, Other
 
         // Items: Tools
-        itemModelGenerator.register(HomeObjectRegistry.IRON_PROSPECTING_PICK, Models.HANDHELD);
+        itemModelGenerator.register(HomeObjects.IRON_PROSPECTING_PICK, Models.HANDHELD);
 
         // Items: Weapons
 
@@ -80,7 +80,7 @@ public class HomeModelProvider extends FabricModelProvider {
         // Items: Equipment, Other
 
         // Items: Crops
-        itemModelGenerator.register(HomeObjectRegistry.CHILI_PEPPER, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.CHILI_PEPPER, Models.GENERATED);
 
         // Items: Food
 
@@ -91,13 +91,13 @@ public class HomeModelProvider extends FabricModelProvider {
         // Items: Foodstuffs, Other
 
         // Items: Metals
-        itemModelGenerator.register(HomeObjectRegistry.RAW_TIN, Models.GENERATED);
-        itemModelGenerator.register(HomeObjectRegistry.TIN_INGOT, Models.GENERATED);
-        itemModelGenerator.register(HomeObjectRegistry.TIN_NUGGET, Models.GENERATED);
-        itemModelGenerator.register(HomeObjectRegistry.COPPER_NUGGET, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.RAW_TIN, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.TIN_INGOT, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.TIN_NUGGET, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.COPPER_NUGGET, Models.GENERATED);
 
         // Items: Ingredients, Other
-        itemModelGenerator.register(HomeObjectRegistry.PEAT_BRICK, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.PEAT_BRICK, Models.GENERATED);
 
         // Items: Misc
 

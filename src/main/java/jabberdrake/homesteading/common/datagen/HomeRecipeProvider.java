@@ -1,7 +1,7 @@
 package jabberdrake.homesteading.common.datagen;
 
 import jabberdrake.homesteading.Homesteading;
-import jabberdrake.homesteading.common.registry.HomeObjectRegistry;
+import jabberdrake.homesteading.common.registry.HomeObjects;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
@@ -10,7 +10,6 @@ import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
-import net.minecraft.util.Identifier;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -18,9 +17,9 @@ import java.util.function.Consumer;
 
 public class HomeRecipeProvider extends FabricRecipeProvider {
     private static final List<ItemConvertible> SMELTABLE_TO_TIN_INGOT = List.of(
-            HomeObjectRegistry.TIN_ORE,
-            HomeObjectRegistry.DEEPSLATE_TIN_ORE,
-            HomeObjectRegistry.RAW_TIN);
+            HomeObjects.TIN_ORE,
+            HomeObjects.DEEPSLATE_TIN_ORE,
+            HomeObjects.RAW_TIN);
 
     public HomeRecipeProvider(FabricDataOutput output) {
         super(output);
@@ -41,23 +40,23 @@ public class HomeRecipeProvider extends FabricRecipeProvider {
         offerBlasting(exporter, List.of(Items.RAW_GOLD_BLOCK), RecipeCategory.MISC, Items.GOLD_BLOCK, 6.3f, 1500, "gold_block");
 
         //SMELTING/BLASTING: Tin Ingot (FROM SMELTABLE_TO_TIN_INGOT)
-        offerSmelting(exporter, SMELTABLE_TO_TIN_INGOT, RecipeCategory.MISC, HomeObjectRegistry.TIN_INGOT, 0.7f, 200, "tin_ingot");
-        offerBlasting(exporter, SMELTABLE_TO_TIN_INGOT, RecipeCategory.MISC, HomeObjectRegistry.TIN_INGOT, 0.7f, 100, "tin_ingot");
+        offerSmelting(exporter, SMELTABLE_TO_TIN_INGOT, RecipeCategory.MISC, HomeObjects.TIN_INGOT, 0.7f, 200, "tin_ingot");
+        offerBlasting(exporter, SMELTABLE_TO_TIN_INGOT, RecipeCategory.MISC, HomeObjects.TIN_INGOT, 0.7f, 100, "tin_ingot");
 
         //CRAFTING: Block of Raw Tin (COMPACTING, FROM Raw Tin) (and vice-versa)
-        offer3x3ReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, HomeObjectRegistry.RAW_TIN, RecipeCategory.DECORATIONS, HomeObjectRegistry.RAW_TIN_BLOCK, null, null);
+        offer3x3ReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, HomeObjects.RAW_TIN, RecipeCategory.DECORATIONS, HomeObjects.RAW_TIN_BLOCK, null, null);
 
         //CRAFTING: Block of Tin (COMPACTING, FROM Tin Ingot) (and vice-versa)
-        offer3x3ReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, HomeObjectRegistry.TIN_INGOT, RecipeCategory.DECORATIONS, HomeObjectRegistry.TIN_BLOCK, null, null);
+        offer3x3ReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, HomeObjects.TIN_INGOT, RecipeCategory.DECORATIONS, HomeObjects.TIN_BLOCK, null, null);
 
         //CRAFTING: Tin Ingot (FROM Tin Nugget) (and vice-versa)
-        offer3x3ReversibleCompactingRecipes(exporter, RecipeCategory.MISC, HomeObjectRegistry.TIN_NUGGET, RecipeCategory.MISC, HomeObjectRegistry.TIN_INGOT, null, null);
+        offer3x3ReversibleCompactingRecipes(exporter, RecipeCategory.MISC, HomeObjects.TIN_NUGGET, RecipeCategory.MISC, HomeObjects.TIN_INGOT, null, null);
 
         //CRAFTING: Copper Ingot (FROM Copper Nugget) (and vice-versa)
-        offer3x3ReversibleCompactingRecipes(exporter, RecipeCategory.MISC, HomeObjectRegistry.COPPER_NUGGET, RecipeCategory.MISC, Items.COPPER_INGOT, null, null);
+        offer3x3ReversibleCompactingRecipes(exporter, RecipeCategory.MISC, HomeObjects.COPPER_NUGGET, RecipeCategory.MISC, Items.COPPER_INGOT, null, null);
 
         //CRAFTING: Iron Prospecting Pick
-        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, HomeObjectRegistry.IRON_PROSPECTING_PICK, 1)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, HomeObjects.IRON_PROSPECTING_PICK, 1)
                 .pattern(" ##")
                 .pattern("#$ ")
                 .pattern(" $ ")
@@ -68,7 +67,7 @@ public class HomeRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter);
 
         //CRAFTING: Peat Block (COMPACTING)
-        offer2x2CompactingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, HomeObjectRegistry.PEAT_BLOCK, HomeObjectRegistry.PEAT_BRICK);
+        offer2x2CompactingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, HomeObjects.PEAT_BLOCK, HomeObjects.PEAT_BRICK);
     }
 
     public static void offer3x3ReversibleCompactingRecipes(
