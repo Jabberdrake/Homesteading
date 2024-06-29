@@ -105,7 +105,7 @@ public class HomeObjects {
     // ####################
 
     // Items: Tools
-    public static final Item IRON_PROSPECTING_PICK = registerItem("iron_prospecting_pick", new ProspectingPickItem(ToolMaterials.IRON, 2, 2f, new FabricItemSettings(), 3), "equipment");
+    public static final Item IRON_PROSPECTING_PICK = registerItem("iron_prospecting_pick", new ProspectingPickItem(ToolMaterials.IRON, 2, 2f, new FabricItemSettings(), 9), "equipment");
 
     // Items: Weapons
 
