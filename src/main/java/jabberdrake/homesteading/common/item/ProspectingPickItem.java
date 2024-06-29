@@ -46,7 +46,7 @@ public class ProspectingPickItem extends PickaxeItem {
 
                         if (isOreBlock(state)) {
                             foundBlock = true;
-                            player.sendMessage(Text.literal("Found " + block.asItem().getName().getString() + " nearby!").formatted(Formatting.LIGHT_PURPLE), false);
+                            player.sendMessage(Text.literal("Found " + block.asItem().getName().getString() + " nearby!").formatted(Formatting.LIGHT_PURPLE), true);
                             break;
                         }
                     }
@@ -55,11 +55,11 @@ public class ProspectingPickItem extends PickaxeItem {
             if (foundBlock) break;
             }
             if (!foundBlock) {
-                player.sendMessage(Text.literal("No ore found nearby...").formatted(Formatting.GRAY, Formatting.ITALIC), false);
+                player.sendMessage(Text.literal("No ore found nearby...").formatted(Formatting.GRAY, Formatting.ITALIC), true);
             }
         }
 
-        context.getStack().damage(3, player,
+        context.getStack().damage(1, player,
                 playerEntity -> playerEntity.sendToolBreakStatus(playerEntity.getActiveHand()));
         return ActionResult.SUCCESS;
     }
