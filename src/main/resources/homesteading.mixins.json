@@ -3,9 +3,13 @@
 	"package": "jabberdrake.homesteading.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ExampleMixin"
+		"AbstractBlockStateMixin",
+		"EntityMixin",
+		"PathNodeTypeMixin",
+		"VineBlockMixin"
 	],
 	"client": [
+		"AbstractClientPlayerEntityMixin",
 		"ItemRendererAccessor",
 		"ItemRendererMixin",
 		"ModelLoaderMixin",
