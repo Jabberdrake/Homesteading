@@ -19,6 +19,10 @@ public class HomeTags {
     public static class Items {
         public static TagKey<Item> CRUCIBLE_VALID = createTag("crucible_valid");
 
+        public static TagKey<Item> COPPER_BITS = createTag("copper_bits");
+        public static TagKey<Item> IRON_BITS = createTag("iron_bits");
+        public static TagKey<Item> GOLD_BITS = createTag("gold_bits");
+
         private static TagKey<Item> createTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, Homesteading.createIdentifier(name));
         }

@@ -4,6 +4,11 @@
     "minecraft:iron_nugget",
     "minecraft:gold_nugget",
     "homesteading:tin_nugget",
-    "homesteading:copper_nugget"
+    "homesteading:copper_nugget",
+    "homesteading:raw_copper_bit",
+    "homesteading:raw_iron_bit",
+    "homesteading:raw_gold_bit",
+    "homesteading:bronze_nugget",
+    "homesteading:brass_nugget"
   ]
 }

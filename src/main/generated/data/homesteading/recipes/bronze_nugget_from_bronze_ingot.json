@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "homesteading:bronze_ingot"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "homesteading:bronze_nugget"
+  }
+}

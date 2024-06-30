@@ -87,6 +87,12 @@
   "item.homesteading.tin_nugget": "Tin Nugget",
   "item.homesteading.copper_nugget": "Copper Nugget",
   "item.homesteading.raw_copper_bit": "Raw Copper Bit",
+  "item.homesteading.raw_gold_bit": "Raw Gold Bit",
+  "item.homesteading.raw_iron_bit": "Raw Iron Bit",
+  "item.homesteading.bronze_ingot": "Bronze Ingot",
+  "item.homesteading.bronze_nugget": "Bronze Nugget",
+  "item.homesteading.brass_ingot": "Brass Ingot",
+  "item.homesteading.brass_nugget": "Brass Nugget",
 
   "homesteading.comment.section25": "ITEMS: INGREDIENTS, OTHER",
   "item.homesteading.peat_brick": "Peat Brick",

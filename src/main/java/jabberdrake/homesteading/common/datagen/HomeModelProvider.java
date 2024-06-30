@@ -96,6 +96,12 @@ public class HomeModelProvider extends FabricModelProvider {
         itemModelGenerator.register(HomeObjects.TIN_NUGGET, Models.GENERATED);
         itemModelGenerator.register(HomeObjects.COPPER_NUGGET, Models.GENERATED);
         itemModelGenerator.register(HomeObjects.RAW_COPPER_BIT, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.RAW_GOLD_BIT, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.RAW_IRON_BIT, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.BRONZE_INGOT, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.BRONZE_NUGGET, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.BRASS_INGOT, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.BRASS_NUGGET, Models.GENERATED);
 
         // Items: Ingredients, Other
         itemModelGenerator.register(HomeObjects.PEAT_BRICK, Models.GENERATED);

@@ -135,11 +135,17 @@ public class HomeObjects {
     // ######################
 
     // Items: Metals
+    public static final Item RAW_IRON_BIT = registerItem("raw_iron_bit", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item RAW_GOLD_BIT = registerItem("raw_gold_bit", new Item(new FabricItemSettings()), "ingredients");
     public static final Item RAW_COPPER_BIT = registerItem("raw_copper_bit", new Item(new FabricItemSettings()), "ingredients");
     public static final Item COPPER_NUGGET = registerItem("copper_nugget", new Item(new FabricItemSettings()), "ingredients");
     public static final Item RAW_TIN = registerItem("raw_tin", new Item(new FabricItemSettings()), "ingredients");
     public static final Item TIN_INGOT = registerItem("tin_ingot", new Item(new FabricItemSettings()), "ingredients");
     public static final Item TIN_NUGGET = registerItem("tin_nugget", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item BRONZE_INGOT = registerItem("bronze_ingot", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item BRONZE_NUGGET = registerItem("bronze_nugget", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item BRASS_INGOT = registerItem("brass_ingot", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item BRASS_NUGGET = registerItem("brass_nugget", new Item(new FabricItemSettings()), "ingredients");
 
     // Items: Ingredients, Other
     public static final Item PEAT_BRICK = registerItem("peat_brick", new Item(new FabricItemSettings()), "ingredients");

@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:gold_nugget",
+    "homesteading:raw_gold_bit"
+  ]
+}
