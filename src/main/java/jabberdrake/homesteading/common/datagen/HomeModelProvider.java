@@ -95,6 +95,7 @@ public class HomeModelProvider extends FabricModelProvider {
         itemModelGenerator.register(HomeObjects.TIN_INGOT, Models.GENERATED);
         itemModelGenerator.register(HomeObjects.TIN_NUGGET, Models.GENERATED);
         itemModelGenerator.register(HomeObjects.COPPER_NUGGET, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.RAW_COPPER_BIT, Models.GENERATED);
 
         // Items: Ingredients, Other
         itemModelGenerator.register(HomeObjects.PEAT_BRICK, Models.GENERATED);

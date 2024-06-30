@@ -34,7 +34,7 @@ public class HomeItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(Items.IRON_NUGGET)
                 .add(Items.GOLD_NUGGET)
                 .add(HomeObjects.TIN_NUGGET)
-                .add(HomeObjects.COPPER_NUGGET);
-
+                .add(HomeObjects.COPPER_NUGGET)
+                .add(HomeObjects.RAW_COPPER_BIT);
     }
 }
