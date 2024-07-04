@@ -33,11 +33,25 @@ public class HomeItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(HomeTags.Items.CRUCIBLE_VALID)
                 .add(HomeObjects.TIN_NUGGET)
                 .add(HomeObjects.COPPER_NUGGET)
+                .add(HomeObjects.RAW_COPPER_BIT)
                 .add(HomeObjects.ZINC_NUGGET)
                 .add(HomeObjects.SILVER_NUGGET)
                 .add(HomeObjects.BRONZE_NUGGET)
                 .add(HomeObjects.BRASS_NUGGET)
                 .add(Items.IRON_NUGGET)
-                .add(Items.GOLD_NUGGET);
+                .add(HomeObjects.RAW_IRON_BIT)
+                .add(Items.GOLD_NUGGET)
+                .add(HomeObjects.RAW_GOLD_BIT);
+
+        //[Homesteading] Bits of a certain metal type, used in Crucible Recipe Logic; No need to comment every individual one, as they will be MANY.
+        getOrCreateTagBuilder(HomeTags.Items.COPPER_BITS)
+                .add(HomeObjects.COPPER_NUGGET)
+                .add(HomeObjects.RAW_COPPER_BIT);
+        getOrCreateTagBuilder(HomeTags.Items.IRON_BITS)
+                .add(Items.IRON_NUGGET)
+                .add(HomeObjects.RAW_IRON_BIT);
+        getOrCreateTagBuilder(HomeTags.Items.GOLD_BITS)
+                .add(Items.GOLD_NUGGET)
+                .add(HomeObjects.RAW_GOLD_BIT);
     }
 }

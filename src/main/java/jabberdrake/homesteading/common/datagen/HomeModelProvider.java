@@ -106,6 +106,11 @@ public class HomeModelProvider extends FabricModelProvider {
 
         // Items: Metals
         itemModelGenerator.register(HomeObjects.COPPER_NUGGET, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.RAW_COPPER_BIT, Models.GENERATED);
+
+        itemModelGenerator.register(HomeObjects.RAW_IRON_BIT, Models.GENERATED);
+
+        itemModelGenerator.register(HomeObjects.RAW_GOLD_BIT, Models.GENERATED);
 
         itemModelGenerator.register(HomeObjects.RAW_TIN, Models.GENERATED);
         itemModelGenerator.register(HomeObjects.TIN_INGOT, Models.GENERATED);

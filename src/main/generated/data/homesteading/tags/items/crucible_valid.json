@@ -3,11 +3,14 @@
   "values": [
     "homesteading:tin_nugget",
     "homesteading:copper_nugget",
+    "homesteading:raw_copper_bit",
     "homesteading:zinc_nugget",
     "homesteading:silver_nugget",
     "homesteading:bronze_nugget",
     "homesteading:brass_nugget",
     "minecraft:iron_nugget",
-    "minecraft:gold_nugget"
+    "homesteading:raw_iron_bit",
+    "minecraft:gold_nugget",
+    "homesteading_raw_gold_bit"
   ]
 }

@@ -43,6 +43,18 @@ public class HomeRecipeProvider extends FabricRecipeProvider {
         offerSmelting(exporter, SMELTABLE_TO_TIN_INGOT, RecipeCategory.MISC, HomeObjects.TIN_INGOT, 0.7f, 200, "tin_ingot");
         offerBlasting(exporter, SMELTABLE_TO_TIN_INGOT, RecipeCategory.MISC, HomeObjects.TIN_INGOT, 0.7f, 100, "tin_ingot");
 
+        //SMELTING/BLASTING: Copper Nugget (FROM Raw Copper Bit)
+        offerSmelting(exporter, List.of(HomeObjects.RAW_COPPER_BIT), RecipeCategory.MISC, HomeObjects.COPPER_NUGGET, 0.07f, 22, "copper_nugget");
+        offerBlasting(exporter, List.of(HomeObjects.RAW_COPPER_BIT), RecipeCategory.MISC, HomeObjects.COPPER_NUGGET, 0.07f, 11, "copper_nugget");
+
+        //SMELTING/BLASTING: Gold Nugget (FROM Raw Gold Bit)
+        offerSmelting(exporter, List.of(HomeObjects.RAW_GOLD_BIT), RecipeCategory.MISC, Items.GOLD_NUGGET, 0.07f, 22, "gold_nugget");
+        offerBlasting(exporter, List.of(HomeObjects.RAW_GOLD_BIT), RecipeCategory.MISC, Items.GOLD_NUGGET, 0.07f, 11, "gold_nugget");
+
+        //SMELTING/BLASTING: Iron Nugget (FROM Raw Iron Bit)
+        offerSmelting(exporter, List.of(HomeObjects.RAW_IRON_BIT), RecipeCategory.MISC, Items.IRON_NUGGET, 0.07f, 22, "iron_nugget");
+        offerBlasting(exporter, List.of(HomeObjects.RAW_IRON_BIT), RecipeCategory.MISC, Items.IRON_NUGGET, 0.07f, 11, "iron_nugget");
+
         //CRAFTING: Block of Raw Tin (COMPACTING, FROM Raw Tin) (and vice-versa)
         offer3x3ReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, HomeObjects.RAW_TIN, RecipeCategory.DECORATIONS, HomeObjects.RAW_TIN_BLOCK, null, null);
 
@@ -52,8 +64,23 @@ public class HomeRecipeProvider extends FabricRecipeProvider {
         //CRAFTING: Tin Ingot (FROM Tin Nugget) (and vice-versa)
         offer3x3ReversibleCompactingRecipes(exporter, RecipeCategory.MISC, HomeObjects.TIN_NUGGET, RecipeCategory.MISC, HomeObjects.TIN_INGOT, null, null);
 
+        //CRAFTING: Raw Copper (FROM Raw Copper Bit) (and vice-versa)
+        offer3x3ReversibleCompactingRecipes(exporter, RecipeCategory.MISC, HomeObjects.RAW_COPPER_BIT, RecipeCategory.MISC, Items.RAW_COPPER, null, null);
+
         //CRAFTING: Copper Ingot (FROM Copper Nugget) (and vice-versa)
         offer3x3ReversibleCompactingRecipes(exporter, RecipeCategory.MISC, HomeObjects.COPPER_NUGGET, RecipeCategory.MISC, Items.COPPER_INGOT, null, null);
+
+        //CRAFTING: Raw Gold (FROM Raw Gold Bit) (and vice-versa)
+        offer3x3ReversibleCompactingRecipes(exporter, RecipeCategory.MISC, HomeObjects.RAW_GOLD_BIT, RecipeCategory.MISC, Items.RAW_GOLD, null, null);
+
+        //CRAFTING: Raw Iron (FROM Raw Iron Bit) (and vice-versa)
+        offer3x3ReversibleCompactingRecipes(exporter, RecipeCategory.MISC, HomeObjects.RAW_IRON_BIT, RecipeCategory.MISC, Items.RAW_IRON, null, null);
+
+        //CRAFTING: Bronze Ingot (FROM Bronze Nugget) (and vice-versa)
+        offer3x3ReversibleCompactingRecipes(exporter, RecipeCategory.MISC, HomeObjects.BRONZE_NUGGET, RecipeCategory.MISC, HomeObjects.BRONZE_INGOT, null, null);
+
+        //CRAFTING: Brass Ingot (FROM Brass Nugget) (and vice-versa)
+        offer3x3ReversibleCompactingRecipes(exporter, RecipeCategory.MISC, HomeObjects.BRASS_NUGGET, RecipeCategory.MISC, HomeObjects.BRASS_INGOT, null, null);
 
         //CRAFTING: Iron Prospecting Pick
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, HomeObjects.IRON_PROSPECTING_PICK, 1)
