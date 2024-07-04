@@ -31,10 +31,13 @@ public class HomeItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         //[Homesteading] All items that can go in a Crucible
         getOrCreateTagBuilder(HomeTags.Items.CRUCIBLE_VALID)
-                .add(Items.IRON_NUGGET)
-                .add(Items.GOLD_NUGGET)
                 .add(HomeObjects.TIN_NUGGET)
-                .add(HomeObjects.COPPER_NUGGET);
-
+                .add(HomeObjects.COPPER_NUGGET)
+                .add(HomeObjects.ZINC_NUGGET)
+                .add(HomeObjects.SILVER_NUGGET)
+                .add(HomeObjects.BRONZE_NUGGET)
+                .add(HomeObjects.BRASS_NUGGET)
+                .add(Items.IRON_NUGGET)
+                .add(Items.GOLD_NUGGET);
     }
 }

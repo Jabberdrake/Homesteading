@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "homesteading:silver_ingot"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "homesteading:silver_nugget"
+  }
+}

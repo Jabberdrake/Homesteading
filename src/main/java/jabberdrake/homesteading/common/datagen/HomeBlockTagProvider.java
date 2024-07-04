@@ -55,6 +55,11 @@ public class HomeBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         // [Homesteading] A set of all vanilla or Homesteading ore blocks.
         getOrCreateTagBuilder(HomeTags.Blocks.ORE_BLOCKS)
                 .add(HomeObjects.TIN_ORE)
+                .add(HomeObjects.DEEPSLATE_TIN_ORE)
+                .add(HomeObjects.ZINC_ORE)
+                .add(HomeObjects.DEEPSLATE_ZINC_ORE)
+                .add(HomeObjects.SILVER_ORE)
+                .add(HomeObjects.DEEPSLATE_SILVER_ORE)
                 .forceAddTag(BlockTags.COAL_ORES)
                 .forceAddTag(BlockTags.COPPER_ORES)
                 .forceAddTag(BlockTags.IRON_ORES)

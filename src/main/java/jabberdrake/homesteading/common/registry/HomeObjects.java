@@ -66,6 +66,16 @@ public class HomeObjects {
     public static final Block DEEPSLATE_TIN_ORE = registerBlock("deepslate_tin_ore", new Block(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_COPPER_ORE)), "building",true);
     public static final Block RAW_TIN_BLOCK = registerBlock("raw_tin_block", new Block(FabricBlockSettings.copyOf(Blocks.RAW_COPPER_BLOCK)), "building", true);
     public static final Block TIN_BLOCK = registerBlock("tin_block", new Block(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK)), "building",true);
+    public static final Block ZINC_ORE = registerBlock("zinc_ore", new Block(FabricBlockSettings.copyOf(Blocks.COPPER_ORE)), "building",true);
+    public static final Block DEEPSLATE_ZINC_ORE = registerBlock("deepslate_zinc_ore", new Block(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_COPPER_ORE)), "building",true);
+    public static final Block RAW_ZINC_BLOCK = registerBlock("raw_zinc_block", new Block(FabricBlockSettings.copyOf(Blocks.RAW_COPPER_BLOCK)), "building", true);
+    public static final Block ZINC_BLOCK = registerBlock("zinc_block", new Block(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK)), "building",true);
+    public static final Block SILVER_ORE = registerBlock("silver_ore", new Block(FabricBlockSettings.copyOf(Blocks.GOLD_ORE)), "building",true);
+    public static final Block DEEPSLATE_SILVER_ORE = registerBlock("deepslate_silver_ore", new Block(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_GOLD_ORE)), "building",true);
+    public static final Block RAW_SILVER_BLOCK = registerBlock("raw_silver_block", new Block(FabricBlockSettings.copyOf(Blocks.RAW_GOLD_BLOCK)), "building", true);
+    public static final Block SILVER_BLOCK = registerBlock("silver_block", new Block(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK)), "building",true);
+    public static final Block BRONZE_BLOCK = registerBlock("bronze_block", new Block(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK)), "building",true);
+    public static final Block BRASS_BLOCK = registerBlock("brass_block", new Block(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK)), "building",true);
 
     // Blocks: Building, Other
 
@@ -135,10 +145,20 @@ public class HomeObjects {
     // ######################
 
     // Items: Metals
+    public static final Item COPPER_NUGGET = registerItem("copper_nugget", new Item(new FabricItemSettings()), "ingredients");
     public static final Item RAW_TIN = registerItem("raw_tin", new Item(new FabricItemSettings()), "ingredients");
     public static final Item TIN_INGOT = registerItem("tin_ingot", new Item(new FabricItemSettings()), "ingredients");
     public static final Item TIN_NUGGET = registerItem("tin_nugget", new Item(new FabricItemSettings()), "ingredients");
-    public static final Item COPPER_NUGGET = registerItem("copper_nugget", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item RAW_ZINC = registerItem("raw_zinc", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item ZINC_INGOT = registerItem("zinc_ingot", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item ZINC_NUGGET = registerItem("zinc_nugget", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item RAW_SILVER = registerItem("raw_silver", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item SILVER_INGOT = registerItem("silver_ingot", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item SILVER_NUGGET = registerItem("silver_nugget", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item BRONZE_INGOT = registerItem("bronze_ingot", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item BRONZE_NUGGET = registerItem("bronze_nugget", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item BRASS_INGOT = registerItem("brass_ingot", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item BRASS_NUGGET = registerItem("brass_nugget", new Item(new FabricItemSettings()), "ingredients");
 
     // Items: Ingredients, Other
     public static final Item PEAT_BRICK = registerItem("peat_brick", new Item(new FabricItemSettings()), "ingredients");

@@ -2,6 +2,11 @@
   "replace": false,
   "values": [
     "homesteading:tin_ore",
+    "homesteading:deepslate_tin_ore",
+    "homesteading:zinc_ore",
+    "homesteading:deepslate_zinc_ore",
+    "homesteading:silver_ore",
+    "homesteading:deepslate_silver_ore",
     "#minecraft:coal_ores",
     "#minecraft:copper_ores",
     "#minecraft:iron_ores",

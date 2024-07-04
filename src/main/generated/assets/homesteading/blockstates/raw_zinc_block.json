@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "homesteading:block/raw_zinc_block"
+    }
+  }
+}

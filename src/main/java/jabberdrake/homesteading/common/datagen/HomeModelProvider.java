@@ -42,6 +42,20 @@ public class HomeModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.RAW_TIN_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.TIN_BLOCK);
 
+        blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.ZINC_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.DEEPSLATE_ZINC_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.RAW_ZINC_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.ZINC_BLOCK);
+
+        blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.SILVER_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.DEEPSLATE_SILVER_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.RAW_SILVER_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.SILVER_BLOCK);
+
+        blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.BRONZE_BLOCK);
+
+        blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.BRASS_BLOCK);
+
         // Blocks: Building, Other
 
         // Blocks: Functional
@@ -91,10 +105,25 @@ public class HomeModelProvider extends FabricModelProvider {
         // Items: Foodstuffs, Other
 
         // Items: Metals
+        itemModelGenerator.register(HomeObjects.COPPER_NUGGET, Models.GENERATED);
+
         itemModelGenerator.register(HomeObjects.RAW_TIN, Models.GENERATED);
         itemModelGenerator.register(HomeObjects.TIN_INGOT, Models.GENERATED);
         itemModelGenerator.register(HomeObjects.TIN_NUGGET, Models.GENERATED);
-        itemModelGenerator.register(HomeObjects.COPPER_NUGGET, Models.GENERATED);
+
+        itemModelGenerator.register(HomeObjects.RAW_ZINC, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.ZINC_INGOT, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.ZINC_NUGGET, Models.GENERATED);
+
+        itemModelGenerator.register(HomeObjects.RAW_SILVER, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.SILVER_INGOT, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.SILVER_NUGGET, Models.GENERATED);
+
+        itemModelGenerator.register(HomeObjects.BRONZE_INGOT, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.BRONZE_NUGGET, Models.GENERATED);
+
+        itemModelGenerator.register(HomeObjects.BRASS_INGOT, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.BRASS_NUGGET, Models.GENERATED);
 
         // Items: Ingredients, Other
         itemModelGenerator.register(HomeObjects.PEAT_BRICK, Models.GENERATED);

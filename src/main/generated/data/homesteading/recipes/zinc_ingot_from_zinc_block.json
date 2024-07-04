@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "homesteading:zinc_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "homesteading:zinc_ingot"
+  }
+}
