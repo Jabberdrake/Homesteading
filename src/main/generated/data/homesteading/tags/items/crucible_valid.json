@@ -11,6 +11,6 @@
     "minecraft:iron_nugget",
     "homesteading:raw_iron_bit",
     "minecraft:gold_nugget",
-    "homesteading_raw_gold_bit"
+    "homesteading:raw_gold_bit"
   ]
 }

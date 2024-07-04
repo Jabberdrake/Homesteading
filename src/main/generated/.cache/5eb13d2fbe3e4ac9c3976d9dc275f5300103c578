@@ -1,4 +1,7 @@
-// 1.20.1	2024-07-01T12:46:54.158038	Homesteading/Tags for minecraft:item
+// 1.20.2	2024-07-04T17:53:57.6349782	Homesteading/Tags for minecraft:item
 0288e5a78aab5bae844c1826a7c865ed6d9d0c41 data\minecraft\tags\items\planks.json
-17a147bb0720161e6ffea73e672563ff136b2f01 data\homesteading\tags\items\crucible_valid.json
 32a273315658f7db2ae401b7d20d015d482c5fae data\minecraft\tags\items\logs_that_burn.json
+da0c6951a9a001b06a5939ce2a92814172e6ca80 data\homesteading\tags\items\iron_bits.json
+6a6c41ac94106daa4fa01309952f49e8b64e4c2a data\homesteading\tags\items\copper_bits.json
+4213146e674fd8f0ac4cfb78cdb7400d9d9ee3fe data\homesteading\tags\items\crucible_valid.json
+03e4e6fd91b9034fb956b3b72c267fef8f4f3bc1 data\homesteading\tags\items\gold_bits.json

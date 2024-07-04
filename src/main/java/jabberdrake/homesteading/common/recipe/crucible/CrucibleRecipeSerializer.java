@@ -1,6 +1,7 @@
 package jabberdrake.homesteading.common.recipe.crucible;
 
 import com.google.gson.JsonObject;
+import com.mojang.serialization.Codec;
 import com.mojang.serialization.JsonOps;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.recipe.RecipeSerializer;
@@ -10,12 +11,12 @@ public enum CrucibleRecipeSerializer implements RecipeSerializer<CrucibleRecipe>
     INSTANCE;
 
     @Override
-    public CrucibleRecipe read(Identifier id, JsonObject json) {
-        return CrucibleRecipe.CODEC.decode(JsonOps.INSTANCE, json).getOrThrow(false, System.err::println).getFirst();
+    public Codec<CrucibleRecipe> codec() {
+        return CrucibleRecipe.CODEC;
     }
 
     @Override
-    public CrucibleRecipe read(Identifier id, PacketByteBuf buf) {
+    public CrucibleRecipe read(PacketByteBuf buf) {
         return buf.decodeAsJson(CrucibleRecipe.CODEC);
     }
 

@@ -7,10 +7,12 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.inventory.Inventory;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtList;
+import net.minecraft.recipe.RecipeEntry;
 import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
@@ -99,10 +101,10 @@ public class CrucibleBlockEntity extends BlockEntity {
                 simpleInventory.setStack(i, inv.get(i));
             }
 
-            Optional<CrucibleRecipe> match = world.getRecipeManager().getFirstMatch(Homesteading.CRUCIBLE_RECIPE, simpleInventory, world);
+            Optional<RecipeEntry<CrucibleRecipe>> match = world.getRecipeManager().getFirstMatch(Homesteading.CRUCIBLE_RECIPE, simpleInventory, world);
 
             if (match.isPresent()) {
-                player.getInventory().offerOrDrop(match.get().getResult().copy());
+                player.getInventory().offerOrDrop(match.get().value().getOutput().copy());
                 world.setBlockState(pos, Blocks.AIR.getDefaultState());
             }
         }
@@ -121,7 +123,7 @@ public class CrucibleBlockEntity extends BlockEntity {
                 simpleInventory.setStack(i, inv.get(i));
             }
 
-            Optional<CrucibleRecipe> match = world.getRecipeManager().getFirstMatch(Homesteading.CRUCIBLE_RECIPE, simpleInventory, world);
+            Optional<RecipeEntry<CrucibleRecipe>> match = world.getRecipeManager().getFirstMatch(Homesteading.CRUCIBLE_RECIPE, simpleInventory, world);
 
             if (match.isPresent()) {
                 player.sendMessage(Text.of("Recipe = True"), true);

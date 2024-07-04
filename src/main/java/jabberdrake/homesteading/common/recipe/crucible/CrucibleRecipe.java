@@ -33,14 +33,14 @@ public class CrucibleRecipe implements Recipe<Inventory> {
 
     public static final Codec<CrucibleRecipe> CODEC = RecordCodecBuilder.create(instance -> instance.group(
             ItemStack.CODEC.listOf().fieldOf("input").forGetter(CrucibleRecipe::getInput),
-            ItemStack.CODEC.fieldOf("output").forGetter(CrucibleRecipe::getResult)
+            ItemStack.CODEC.fieldOf("output").forGetter(CrucibleRecipe::getOutput)
     ).apply(instance, CrucibleRecipe::new));
 
     public List<ItemStack> getInput() {
         return input;
     }
 
-    public ItemStack getResult() {
+    public ItemStack getOutput() {
         return output;
     }
 
@@ -95,13 +95,8 @@ public class CrucibleRecipe implements Recipe<Inventory> {
     }
 
     @Override
-    public ItemStack getOutput(DynamicRegistryManager registryManager) {
+    public ItemStack getResult(DynamicRegistryManager registryManager) {
         return output;
-    }
-
-    @Override
-    public Identifier getId() {
-        return ID;
     }
 
     @Override
