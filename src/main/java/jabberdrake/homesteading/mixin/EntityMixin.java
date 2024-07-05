@@ -35,6 +35,8 @@ public abstract class EntityMixin implements EntityAccess {
     @Shadow
     public abstract void playSound(SoundEvent sound, float volume, float pitch);
 
+    @Shadow public abstract boolean isSneaking();
+
     @Override
     public BlockPos homesteading$getBlockPosByTag(TagKey<Block> tag) {
         Box contractedBoundingBox = this.getBoundingBox().contract(0.1f);
@@ -58,7 +60,7 @@ public abstract class EntityMixin implements EntityAccess {
 
     @Inject(method = "getJumpVelocityMultiplier", at = @At("HEAD"), cancellable = true)
     private void getJumpVelocityMultiplier(CallbackInfoReturnable<Float> cir) {
-        if (this.homesteading$isInBlockOfTag(BlockTags.LEAVES) && this.fallDistance < this.getSafeFallDistance()) {
+        if (this.homesteading$isInBlockOfTag(BlockTags.LEAVES) && this.fallDistance < this.getSafeFallDistance() && !this.isSneaking()) {
             cir.setReturnValue(0.8f);
         }
     }
