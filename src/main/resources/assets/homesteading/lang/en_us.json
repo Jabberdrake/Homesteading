@@ -123,5 +123,6 @@
 
   "homesteading.comment.section28": "TOOLTIPS",
   "tooltip.homesteading.prospecting_pick_range": "Range: %s",
+  "tooltip.homesteading.crucible_contains": "Contains ",
   "tooltip.homesteading.bronze_alloy": "Bronze Alloy"
 }
