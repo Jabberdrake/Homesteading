@@ -2,6 +2,10 @@ package jabberdrake.homesteading.common.util;
 
 import jabberdrake.homesteading.Homesteading;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.PillarBlock;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.AxeItem;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.slf4j.Logger;
@@ -13,7 +17,7 @@ import java.util.Queue;
 
 public class BlockUtils {
 
-    // Returns a list of all same blocks within a box centered on the origin block
+    // Returns a list of all same blocks within a cuboid centered on the origin block
     public static List<BlockPos> getAllSameNeighbours(World world, BlockPos originPos, BlockState originState, int minX, int maxX, int minY, int maxY, int minZ, int maxZ) {
         List<BlockPos> result = new ArrayList<>();
 
@@ -38,20 +42,15 @@ public class BlockUtils {
         List<BlockPos> logs = new ArrayList<>();
         Queue<BlockPos> queue = new LinkedList<>();
 
-        Logger logger = Homesteading.LOGGER;
-
         logs.add(originPos);
         queue.add(originPos);
 
         while (!queue.isEmpty()) {
             BlockPos currentPos = queue.poll();
-            logger.info("[debug] currentPos:" + currentPos);
             // Never search in positions with a y coordinate lower than that of currentPos
             for (BlockPos sameNeighbour : getAllSameNeighbours(world, currentPos, world.getBlockState(currentPos), -1, 1, 0, 1, -1, 1)) {
-                //if (!world.getBlockState(sameNeighbour).get(HomesteadingProperties.NATURAL)) continue;
+                if (!world.getBlockState(sameNeighbour).get(HomesteadingProperties.NATURAL)) continue;
                 if (!logs.contains(sameNeighbour)) {
-                    logger.info("[debug] valid neighbour:" + sameNeighbour);
-
                     logs.add(sameNeighbour);
                     queue.add(sameNeighbour);
                 }
@@ -61,4 +60,5 @@ public class BlockUtils {
         logs.remove(0);
         return logs;
     }
+
 }
