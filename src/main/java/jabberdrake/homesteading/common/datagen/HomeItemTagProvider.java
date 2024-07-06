@@ -53,5 +53,7 @@ public class HomeItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(HomeTags.Items.GOLD_BITS)
                 .add(Items.GOLD_NUGGET)
                 .add(HomeObjects.RAW_GOLD_BIT);
+        getOrCreateTagBuilder(HomeTags.Items.TIN_BITS)
+                .add(HomeObjects.TIN_NUGGET);
     }
 }

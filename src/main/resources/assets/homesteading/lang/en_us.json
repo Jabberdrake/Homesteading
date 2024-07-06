@@ -118,6 +118,10 @@
   "homesteading.comment.section27": "ITEMS: MISC",
   "item.homesteading.crocodile_spear": "Crocodile Spear",
 
+  "homesteading.comment.section29": "ITEMS: GROUPLESS",
+  "item.homesteading.crucible_bronze": "Sealed Crucible",
+
   "homesteading.comment.section28": "TOOLTIPS",
-  "tooltip.homesteading.prospecting_pick_range": "Range: %s"
+  "tooltip.homesteading.prospecting_pick_range": "Range: %s",
+  "tooltip.homesteading.bronze_alloy": "Bronze Alloy"
 }
