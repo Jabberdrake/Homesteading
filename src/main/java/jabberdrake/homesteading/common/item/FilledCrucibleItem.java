@@ -20,6 +20,6 @@ public class FilledCrucibleItem extends Item {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add(Text.translatable("tooltip.homesteading.crucible_contains").append(Text.translatable("tooltip.homesteading." + contents)).formatted(Formatting.GRAY));
+        tooltip.add(Text.translatable("tooltip.homesteading." + contents).formatted(Formatting.GRAY));
     }
 }
