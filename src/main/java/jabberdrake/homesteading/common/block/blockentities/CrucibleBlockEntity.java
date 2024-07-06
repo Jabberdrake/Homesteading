@@ -126,7 +126,7 @@ public class CrucibleBlockEntity extends BlockEntity {
             Optional<RecipeEntry<CrucibleRecipe>> match = world.getRecipeManager().getFirstMatch(Homesteading.CRUCIBLE_RECIPE, simpleInventory, world);
 
             if (match.isPresent()) {
-                player.sendMessage(Text.of("Recipe = True"), true);
+                player.sendMessage(Text.of("This will likely result in an alloy."), true);
             } else {
                 player.sendMessage(Text.of("There is no recipe here."), true);
             }

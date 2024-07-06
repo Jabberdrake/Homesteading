@@ -2,16 +2,35 @@
   "type": "homesteading:crucible",
   "input": [
     {
-      "id": "homesteading:copper_nugget",
-      "Count": 6
+      "tag": "homesteading:copper_bits"
     },
     {
-      "id": "homesteading:tin_nugget",
-      "Count": 3
+      "tag": "homesteading:copper_bits"
+    },
+    {
+      "tag": "homesteading:copper_bits"
+    },
+    {
+      "tag": "homesteading:copper_bits"
+    },
+    {
+      "tag": "homesteading:copper_bits"
+    },
+    {
+      "tag": "homesteading:copper_bits"
+    },
+    {
+      "tag": "homesteading:tin_bits"
+    },
+    {
+      "tag": "homesteading:tin_bits"
+    },
+    {
+      "tag": "homesteading:tin_bits"
     }
   ],
   "output": {
-    "id": "minecraft:amethyst_shard",
+    "id": "homesteading:crucible_bronze",
     "Count": 1
   }
 }

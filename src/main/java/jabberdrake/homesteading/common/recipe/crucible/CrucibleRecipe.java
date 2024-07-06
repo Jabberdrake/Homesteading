@@ -6,12 +6,14 @@ import jabberdrake.homesteading.Homesteading;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.Recipe;
 import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.RecipeType;
 import net.minecraft.registry.DynamicRegistryManager;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
+import org.spongepowered.asm.mixin.injection.struct.InjectorGroupInfo;
 
 import java.util.HashMap;
 import java.util.List;
@@ -20,23 +22,20 @@ import java.util.Map;
 public class CrucibleRecipe implements Recipe<Inventory> {
     public static final Identifier ID = new Identifier(Homesteading.MOD_ID, "crucible");
 
-    /*This List<ItemStack> needs to be changed to two lists, one for Ingredients, and another for Integers;
-    Pay attention, cuz when we build the HashMap<Ingredient, Integer> it is going to process ArrayList<Ingredient>[0] with ArrayList<Integer>[0] and so on...
-    We need to do this to make sure we can use tags in Crucible recipes, meaning we don't need to do 4 recipes per alloy - Spacer*/
-    private final List<ItemStack> input;
+    private final List<Ingredient> input;
     private final ItemStack output;
 
-    public CrucibleRecipe(List<ItemStack> input, ItemStack output) {
+    public CrucibleRecipe(List<Ingredient> input, ItemStack output) {
         this.input = input;
         this.output = output;
     }
 
     public static final Codec<CrucibleRecipe> CODEC = RecordCodecBuilder.create(instance -> instance.group(
-            ItemStack.CODEC.listOf().fieldOf("input").forGetter(CrucibleRecipe::getInput),
+            Ingredient.DISALLOW_EMPTY_CODEC.listOf().fieldOf("input").forGetter(CrucibleRecipe::getInput),
             ItemStack.CODEC.fieldOf("output").forGetter(CrucibleRecipe::getOutput)
     ).apply(instance, CrucibleRecipe::new));
 
-    public List<ItemStack> getInput() {
+    public List<Ingredient> getInput() {
         return input;
     }
 
@@ -49,40 +48,47 @@ public class CrucibleRecipe implements Recipe<Inventory> {
         int inputSize = getInput().size();
         int invSize = inventory.size();
 
-        HashMap<Item, Integer> inputMap = new HashMap<>();
-        HashMap<Item, Integer> inventoryMap = new HashMap<>();
+        HashMap<Integer, ItemStack> inventoryMap = new HashMap<>();
 
         int matchAmount = 0;
+        int stackSizeTested = 0;
 
-        if (invSize == inputSize) {
-            for (int i = 0; i < inputSize; i++) {
-                Item inputItem = getInput().get(i).getItem();
-                int inputCount = getInput().get(i).getCount();
+        if (inputSize == 9 && invSize <= 9) {
+            for (int i = 0; i < invSize; i++) {
+                ItemStack stack = inventory.getStack(i);
 
-                inputMap.put(inputItem, inputCount);
-
-                Item invItem = inventory.getStack(i).getItem();
-                int invCount = inventory.getStack(i).getCount();
-
-                inventoryMap.put(invItem, invCount);
+                inventoryMap.put(i, stack);
             }
 
-            for (Map.Entry<Item, Integer> entry : inventoryMap.entrySet()) {
-                Item key = entry.getKey();
-                int invMapCount = entry.getValue();
+            for (int j = 0; j < inventoryMap.size();) {
+                ItemStack stackToTest = inventoryMap.get(j);
 
-                if (inputMap.containsKey(key)) {
-                    int inpMapCount = inputMap.get(key);
+                for (int k = 0; k < 9; k++) {
+                    Ingredient ingToTest = getInput().get(k);
 
-                    if (inpMapCount == invMapCount) {
+                    if (ingToTest.test(stackToTest)) {
                         matchAmount++;
+                        stackSizeTested++;
+
+                        if (stackSizeTested == stackToTest.getCount()) {
+                            stackSizeTested = 0;
+                            j++;
+                            break;
+                        }
                     }
                 }
             }
+        } else {
+            Homesteading.LOGGER.info("Something went wrong with a Crucible Recipe!");
+            Homesteading.LOGGER.info("Either the Input has more/less than 9 entries or the Crucible bugged and has more than 9 items inside.");
+
+            return false;
         }
 
-        return matchAmount == inputSize;
+        return matchAmount == 9;
     }
+
+
 
     @Override
     public ItemStack craft(Inventory inventory, DynamicRegistryManager registryManager) {

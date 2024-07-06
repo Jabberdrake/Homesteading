@@ -2,6 +2,7 @@ package jabberdrake.homesteading.common.registry;
 
 import jabberdrake.homesteading.Homesteading;
 import jabberdrake.homesteading.common.block.CrucibleBlock;
+import jabberdrake.homesteading.common.item.FilledCrucibleItem;
 import jabberdrake.homesteading.common.item.ProspectingPickItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
@@ -175,6 +176,11 @@ public class HomeObjects {
     // Items: Misc
     public static final Item CROCODILE_SPEAR = registerItem("crocodile_spear", new Item(new FabricItemSettings().maxCount(1)), "misc");
 
+    // #############
+    // # GROUPLESS #
+    // #############
+    //Items and blocks here are not supposed to appear in the Creative Menu. If you see any entry using a group different from "groupless" here, change it.
+    public static final Item CRUCIBLE_BRONZE = registerItem("crucible_bronze", new FilledCrucibleItem("bronze_alloy", new FabricItemSettings()), "groupless");
 
     private static void assignItemGroup(Item item, Identifier identifier, String group) {
         switch (group) {
@@ -198,6 +204,8 @@ public class HomeObjects {
                 break;
             case "misc":
                 MISC.put(item, identifier);
+                break;
+            case "groupless":
                 break;
             default:
                 Homesteading.LOGGER.error("Found unknown item group found while registering {}!", identifier);
