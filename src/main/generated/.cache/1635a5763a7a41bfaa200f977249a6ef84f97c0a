@@ -1,4 +1,4 @@
-// 1.20.2	2024-07-05T09:23:39.1344325	Homesteading/Block Loot Tables
+// 1.20.2	2024-07-08T11:34:17.634844	Homesteading/Block Loot Tables
 1564badc3559aa2e1add6a711f3ee43a4c36dbeb data\homesteading\loot_tables\blocks\calcite_pressure_plate.json
 9d79bf8f42eec577dfec13478c0dfa0966753aa2 data\homesteading\loot_tables\blocks\hazel_pressure_plate.json
 6aa2c1d7726921c67849710b9d6e5be77cccbac0 data\homesteading\loot_tables\blocks\hazel_fence_gate.json
@@ -13,6 +13,7 @@ f8752bd4c60b0119d0a84f16ecce2102f4aea02e data\homesteading\loot_tables\blocks\ca
 15b6d80a670094c1c1f4c14c96eb283eb4442c65 data\homesteading\loot_tables\blocks\hazel_fence.json
 d1121a1fe472e5d3bbd35e6efc34125cf7e92df5 data\homesteading\loot_tables\blocks\hazel_slab.json
 1103fdd51088d9a26e4e1d6db402fb24876818cf data\homesteading\loot_tables\blocks\calcite_stairs.json
+7716aa56614470d918b99620409824724e3f70b0 data\homesteading\loot_tables\blocks\basalt_gold_ore.json
 c01a052210a5d233309eb9ff127d7b3dcb3c6e06 data\homesteading\loot_tables\blocks\tin_block.json
 3bc5e5c09b830dc051d8e1ab8c3050f55fc0ab69 data\homesteading\loot_tables\blocks\tin_ore.json
 e401e773d845290e25110ee617a69a01cbd76bf0 data\homesteading\loot_tables\blocks\calcite_button.json

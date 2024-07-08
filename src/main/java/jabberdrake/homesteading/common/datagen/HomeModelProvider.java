@@ -37,6 +37,8 @@ public class HomeModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTrapdoor(HomeObjects.HAZEL_TRAPDOOR);
 
         // Blocks: Ores and Metals
+        blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.BASALT_GOLD_ORE);
+
         blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.TIN_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.DEEPSLATE_TIN_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.RAW_TIN_BLOCK);
