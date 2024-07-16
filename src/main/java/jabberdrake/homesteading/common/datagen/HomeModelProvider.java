@@ -136,32 +136,34 @@ public class HomeModelProvider extends FabricModelProvider {
         // Items: Foodstuffs, Other
 
         // Items: Metals
-        itemModelGenerator.register(HomeObjects.RAW_COPPER_BIT, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.RAW_COPPER_CHUNK, Models.GENERATED);
         itemModelGenerator.register(HomeObjects.COPPER_NUGGET, Models.GENERATED);
 
-        itemModelGenerator.register(HomeObjects.RAW_IRON_BIT, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.RAW_IRON_CHUNK, Models.GENERATED);
         itemModelGenerator.register(HomeObjects.CAST_IRON_INGOT, Models.GENERATED);
         itemModelGenerator.register(HomeObjects.CAST_IRON_NUGGET, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.IRON_BLOOM, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.IRON_BLOOM_CHUNK, Models.GENERATED);
 
-        itemModelGenerator.register(HomeObjects.RAW_GOLD_BIT, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.RAW_GOLD_CHUNK, Models.GENERATED);
 
         itemModelGenerator.register(HomeObjects.RAW_TIN, Models.GENERATED);
-        itemModelGenerator.register(HomeObjects.RAW_TIN_BIT, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.RAW_TIN_CHUNK, Models.GENERATED);
         itemModelGenerator.register(HomeObjects.TIN_INGOT, Models.GENERATED);
         itemModelGenerator.register(HomeObjects.TIN_NUGGET, Models.GENERATED);
 
         itemModelGenerator.register(HomeObjects.RAW_ZINC, Models.GENERATED);
-        itemModelGenerator.register(HomeObjects.RAW_ZINC_BIT, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.RAW_ZINC_CHUNK, Models.GENERATED);
         itemModelGenerator.register(HomeObjects.ZINC_INGOT, Models.GENERATED);
         itemModelGenerator.register(HomeObjects.ZINC_NUGGET, Models.GENERATED);
 
         itemModelGenerator.register(HomeObjects.RAW_BISMUTH, Models.GENERATED);
-        itemModelGenerator.register(HomeObjects.RAW_BISMUTH_BIT, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.RAW_BISMUTH_CHUNK, Models.GENERATED);
         itemModelGenerator.register(HomeObjects.BISMUTH_INGOT, Models.GENERATED);
         itemModelGenerator.register(HomeObjects.BISMUTH_NUGGET, Models.GENERATED);
 
         itemModelGenerator.register(HomeObjects.RAW_SILVER, Models.GENERATED);
-        itemModelGenerator.register(HomeObjects.RAW_SILVER_BIT, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.RAW_SILVER_CHUNK, Models.GENERATED);
         itemModelGenerator.register(HomeObjects.SILVER_INGOT, Models.GENERATED);
         itemModelGenerator.register(HomeObjects.SILVER_NUGGET, Models.GENERATED);
 

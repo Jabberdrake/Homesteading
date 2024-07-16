@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 22,
+  "experience": 0.07,
+  "group": "iron_nugget",
+  "ingredient": {
+    "item": "homesteading:raw_iron_chunk"
+  },
+  "result": "minecraft:iron_nugget"
+}

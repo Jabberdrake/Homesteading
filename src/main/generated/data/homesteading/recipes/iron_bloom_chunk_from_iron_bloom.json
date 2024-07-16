@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "homesteading:iron_bloom"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "homesteading:iron_bloom_chunk"
+  }
+}

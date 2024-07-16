@@ -32,11 +32,14 @@ public class HomeLootTableProvider extends FabricBlockLootTableProvider {
     public void generate() {
         addDrop(HomeObjects.BASALT_GOLD_ORE, oreDrops(HomeObjects.BASALT_GOLD_ORE, Items.RAW_GOLD));
         addDrop(HomeObjects.TIN_ORE, copperLikeOreDrops(HomeObjects.TIN_ORE, HomeObjects.RAW_TIN, 1, 3));
-        addDrop(HomeObjects.DEEPSLATE_TIN_ORE, copperLikeOreDrops(HomeObjects.TIN_ORE, HomeObjects.RAW_TIN, 1, 3));
+        addDrop(HomeObjects.DEEPSLATE_TIN_ORE, copperLikeOreDrops(HomeObjects.DEEPSLATE_TIN_ORE, HomeObjects.RAW_TIN, 1, 3));
         addDrop(HomeObjects.RAW_TIN_BLOCK);
         addDrop(HomeObjects.TIN_BLOCK);
         addDrop(HomeObjects.ZINC_ORE, copperLikeOreDrops(HomeObjects.ZINC_ORE, HomeObjects.RAW_ZINC, 1, 3));
         addDrop(HomeObjects.DEEPSLATE_ZINC_ORE, copperLikeOreDrops(HomeObjects.DEEPSLATE_ZINC_ORE, HomeObjects.RAW_ZINC, 1, 3));
+        addDrop(HomeObjects.ANDESITE_BISMUTH_ORE, oreDrops(HomeObjects.ANDESITE_BISMUTH_ORE, HomeObjects.RAW_BISMUTH));
+        addDrop(HomeObjects.BISMUTH_ORE, oreDrops(HomeObjects.BISMUTH_ORE, HomeObjects.RAW_BISMUTH));
+        addDrop(HomeObjects.DEEPSLATE_BISMUTH_ORE, oreDrops(HomeObjects.DEEPSLATE_BISMUTH_ORE, HomeObjects.RAW_BISMUTH));
         addDrop(HomeObjects.MARBLE_SILVER_ORE, oreDrops(HomeObjects.MARBLE_SILVER_ORE, HomeObjects.RAW_SILVER));
         addDrop(HomeObjects.SILVER_ORE, oreDrops(HomeObjects.SILVER_ORE, HomeObjects.RAW_SILVER));
         addDrop(HomeObjects.DEEPSLATE_SILVER_ORE, oreDrops(HomeObjects.DEEPSLATE_SILVER_ORE, HomeObjects.RAW_SILVER));

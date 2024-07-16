@@ -24,7 +24,7 @@
                   }
                 }
               ],
-              "name": "homesteading:tin_ore"
+              "name": "homesteading:deepslate_tin_ore"
             },
             {
               "type": "minecraft:item",

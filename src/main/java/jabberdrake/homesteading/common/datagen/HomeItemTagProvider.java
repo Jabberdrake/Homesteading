@@ -32,47 +32,49 @@ public class HomeItemTagProvider extends FabricTagProvider.ItemTagProvider {
         //[Homesteading] All items that can go in a Crucible
         getOrCreateTagBuilder(HomeTags.Items.CRUCIBLE_VALID)
                 .add(HomeObjects.TIN_NUGGET)
-                .add(HomeObjects.RAW_TIN_BIT)
+                .add(HomeObjects.RAW_TIN_CHUNK)
                 .add(HomeObjects.COPPER_NUGGET)
-                .add(HomeObjects.RAW_COPPER_BIT)
+                .add(HomeObjects.RAW_COPPER_CHUNK)
                 .add(HomeObjects.ZINC_NUGGET)
-                .add(HomeObjects.RAW_ZINC_BIT)
+                .add(HomeObjects.RAW_ZINC_CHUNK)
                 .add(HomeObjects.BISMUTH_NUGGET)
-                .add(HomeObjects.RAW_BISMUTH_BIT)
+                .add(HomeObjects.RAW_BISMUTH_CHUNK)
                 .add(HomeObjects.SILVER_NUGGET)
-                .add(HomeObjects.RAW_SILVER_BIT)
+                .add(HomeObjects.RAW_SILVER_CHUNK)
+                .add(HomeObjects.IRON_BLOOM_CHUNK)
                 .add(Items.IRON_NUGGET)
-                .add(HomeObjects.RAW_IRON_BIT)
+                .add(HomeObjects.RAW_IRON_CHUNK)
                 .add(HomeObjects.CAST_IRON_NUGGET)
                 .add(Items.GOLD_NUGGET)
-                .add(HomeObjects.RAW_GOLD_BIT)
+                .add(HomeObjects.RAW_GOLD_CHUNK)
                 .add(HomeObjects.BRONZE_NUGGET)
                 .add(HomeObjects.BRASS_NUGGET)
                 .add(HomeObjects.ELECTRUM_NUGGET);
 
         //[Homesteading] Bits of a certain metal type, used in Crucible Recipe Logic; No need to comment every individual one, as they will be MANY.
-        getOrCreateTagBuilder(HomeTags.Items.COPPER_BITS)
+        getOrCreateTagBuilder(HomeTags.Items.COPPER_CHUNKS)
                 .add(HomeObjects.COPPER_NUGGET)
-                .add(HomeObjects.RAW_COPPER_BIT);
-        getOrCreateTagBuilder(HomeTags.Items.WROUGHT_IRON_BITS)
-                .add(Items.IRON_NUGGET);
-        getOrCreateTagBuilder(HomeTags.Items.CAST_IRON_BITS)
+                .add(HomeObjects.RAW_COPPER_CHUNK);
+        getOrCreateTagBuilder(HomeTags.Items.WROUGHT_IRON_CHUNKS)
+                .add(Items.IRON_NUGGET)
+                .add(HomeObjects.IRON_BLOOM_CHUNK);
+        getOrCreateTagBuilder(HomeTags.Items.CAST_IRON_CHUNKS)
                 .add(HomeObjects.CAST_IRON_NUGGET)
-                .add(HomeObjects.RAW_IRON_BIT);
-        getOrCreateTagBuilder(HomeTags.Items.GOLD_BITS)
+                .add(HomeObjects.RAW_IRON_CHUNK);
+        getOrCreateTagBuilder(HomeTags.Items.GOLD_CHUNKS)
                 .add(Items.GOLD_NUGGET)
-                .add(HomeObjects.RAW_GOLD_BIT);
-        getOrCreateTagBuilder(HomeTags.Items.TIN_BITS)
+                .add(HomeObjects.RAW_GOLD_CHUNK);
+        getOrCreateTagBuilder(HomeTags.Items.TIN_CHUNKS)
                 .add(HomeObjects.TIN_NUGGET)
-                .add(HomeObjects.RAW_TIN_BIT);
-        getOrCreateTagBuilder(HomeTags.Items.ZINC_BITS)
+                .add(HomeObjects.RAW_TIN_CHUNK);
+        getOrCreateTagBuilder(HomeTags.Items.ZINC_CHUNKS)
                 .add(HomeObjects.ZINC_NUGGET)
-                .add(HomeObjects.RAW_ZINC_BIT);
-        getOrCreateTagBuilder(HomeTags.Items.BISMUTH_BITS)
+                .add(HomeObjects.RAW_ZINC_CHUNK);
+        getOrCreateTagBuilder(HomeTags.Items.BISMUTH_CHUNKS)
                 .add(HomeObjects.BISMUTH_NUGGET)
-                .add(HomeObjects.RAW_BISMUTH_BIT);
-        getOrCreateTagBuilder(HomeTags.Items.SILVER_BITS)
+                .add(HomeObjects.RAW_BISMUTH_CHUNK);
+        getOrCreateTagBuilder(HomeTags.Items.SILVER_CHUNKS)
                 .add(HomeObjects.SILVER_NUGGET)
-                .add(HomeObjects.RAW_SILVER_BIT);
+                .add(HomeObjects.RAW_SILVER_CHUNK);
     }
 }

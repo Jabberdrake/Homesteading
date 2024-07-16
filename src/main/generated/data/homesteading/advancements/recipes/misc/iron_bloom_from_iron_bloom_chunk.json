@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_iron_bloom_chunk": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "homesteading:iron_bloom_chunk"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "homesteading:iron_bloom_from_iron_bloom_chunk"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_iron_bloom_chunk"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "homesteading:iron_bloom_from_iron_bloom_chunk"
+    ]
+  },
+  "sends_telemetry_event": false
+}

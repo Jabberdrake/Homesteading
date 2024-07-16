@@ -167,26 +167,28 @@ public class HomeObjects {
     // ######################
 
     // Items: Metals
-    public static final Item RAW_IRON_BIT = registerItem("raw_iron_bit", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item RAW_IRON_CHUNK = registerItem("raw_iron_chunk", new Item(new FabricItemSettings()), "ingredients");
     public static final Item CAST_IRON_INGOT = registerItem("cast_iron_ingot", new Item(new FabricItemSettings()), "ingredients");
     public static final Item CAST_IRON_NUGGET = registerItem("cast_iron_nugget", new Item(new FabricItemSettings()), "ingredients");
-    public static final Item RAW_GOLD_BIT = registerItem("raw_gold_bit", new Item(new FabricItemSettings()), "ingredients");
-    public static final Item RAW_COPPER_BIT = registerItem("raw_copper_bit", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item IRON_BLOOM = registerItem("iron_bloom", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item IRON_BLOOM_CHUNK = registerItem("iron_bloom_chunk", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item RAW_GOLD_CHUNK = registerItem("raw_gold_chunk", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item RAW_COPPER_CHUNK = registerItem("raw_copper_chunk", new Item(new FabricItemSettings()), "ingredients");
     public static final Item COPPER_NUGGET = registerItem("copper_nugget", new Item(new FabricItemSettings()), "ingredients");
     public static final Item RAW_TIN = registerItem("raw_tin", new Item(new FabricItemSettings()), "ingredients");
-    public static final Item RAW_TIN_BIT = registerItem("raw_tin_bit", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item RAW_TIN_CHUNK = registerItem("raw_tin_chunk", new Item(new FabricItemSettings()), "ingredients");
     public static final Item TIN_INGOT = registerItem("tin_ingot", new Item(new FabricItemSettings()), "ingredients");
     public static final Item TIN_NUGGET = registerItem("tin_nugget", new Item(new FabricItemSettings()), "ingredients");
     public static final Item RAW_ZINC = registerItem("raw_zinc", new Item(new FabricItemSettings()), "ingredients");
-    public static final Item RAW_ZINC_BIT = registerItem("raw_zinc_bit", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item RAW_ZINC_CHUNK = registerItem("raw_zinc_chunk", new Item(new FabricItemSettings()), "ingredients");
     public static final Item ZINC_INGOT = registerItem("zinc_ingot", new Item(new FabricItemSettings()), "ingredients");
     public static final Item ZINC_NUGGET = registerItem("zinc_nugget", new Item(new FabricItemSettings()), "ingredients");
     public static final Item RAW_BISMUTH = registerItem("raw_bismuth", new Item(new FabricItemSettings()), "ingredients");
-    public static final Item RAW_BISMUTH_BIT = registerItem("raw_bismuth_bit", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item RAW_BISMUTH_CHUNK = registerItem("raw_bismuth_chunk", new Item(new FabricItemSettings()), "ingredients");
     public static final Item BISMUTH_INGOT = registerItem("bismuth_ingot", new Item(new FabricItemSettings()), "ingredients");
     public static final Item BISMUTH_NUGGET = registerItem("bismuth_nugget", new Item(new FabricItemSettings()), "ingredients");
     public static final Item RAW_SILVER = registerItem("raw_silver", new Item(new FabricItemSettings()), "ingredients");
-    public static final Item RAW_SILVER_BIT = registerItem("raw_silver_bit", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item RAW_SILVER_CHUNK = registerItem("raw_silver_chunk", new Item(new FabricItemSettings()), "ingredients");
     public static final Item SILVER_INGOT = registerItem("silver_ingot", new Item(new FabricItemSettings()), "ingredients");
     public static final Item SILVER_NUGGET = registerItem("silver_nugget", new Item(new FabricItemSettings()), "ingredients");
     public static final Item BRONZE_INGOT = registerItem("bronze_ingot", new Item(new FabricItemSettings()), "ingredients");
@@ -291,7 +293,7 @@ public class HomeObjects {
                 }).build();
 
         INGREDIENTS_GROUP = FabricItemGroup.builder().displayName(Text.translatable("itemGroup." + Homesteading.MOD_ID + ".ingredients"))
-                .icon(Items.GOLD_INGOT::getDefaultStack).entries((displayContext, entries) -> {
+                .icon(HomeObjects.BRASS_INGOT::getDefaultStack).entries((displayContext, entries) -> {
                     INGREDIENTS.keySet().forEach(entries::add);
                 }).build();
 

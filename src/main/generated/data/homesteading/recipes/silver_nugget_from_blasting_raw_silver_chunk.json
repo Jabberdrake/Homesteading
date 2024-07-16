@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 11,
+  "experience": 0.07,
+  "group": "silver_nugget",
+  "ingredient": {
+    "item": "homesteading:raw_silver_chunk"
+  },
+  "result": "homesteading:silver_nugget"
+}
