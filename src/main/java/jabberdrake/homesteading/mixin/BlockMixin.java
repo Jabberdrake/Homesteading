@@ -1,13 +1,11 @@
 package jabberdrake.homesteading.mixin;
 
-import jabberdrake.homesteading.Homesteading;
 import jabberdrake.homesteading.common.util.BlockUtils;
 import jabberdrake.homesteading.common.util.HomesteadingProperties;
 import jabberdrake.homesteading.common.util.PlayerUtils;
 import net.minecraft.block.*;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.AxeItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.util.math.BlockPos;

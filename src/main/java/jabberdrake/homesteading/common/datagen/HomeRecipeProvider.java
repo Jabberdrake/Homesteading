@@ -5,7 +5,6 @@ import jabberdrake.homesteading.common.registry.HomeObjects;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeExporter;
-import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
@@ -14,7 +13,6 @@ import net.minecraft.recipe.book.RecipeCategory;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
-import java.util.function.Consumer;
 
 public class HomeRecipeProvider extends FabricRecipeProvider {
     private static final List<ItemConvertible> SMELTABLE_TO_TIN_INGOT = List.of(

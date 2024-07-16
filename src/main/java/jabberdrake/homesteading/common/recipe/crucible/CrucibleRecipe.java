@@ -4,7 +4,6 @@ import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import jabberdrake.homesteading.Homesteading;
 import net.minecraft.inventory.Inventory;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.Recipe;
@@ -13,11 +12,9 @@ import net.minecraft.recipe.RecipeType;
 import net.minecraft.registry.DynamicRegistryManager;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
-import org.spongepowered.asm.mixin.injection.struct.InjectorGroupInfo;
 
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class CrucibleRecipe implements Recipe<Inventory> {
     public static final Identifier ID = new Identifier(Homesteading.MOD_ID, "crucible");

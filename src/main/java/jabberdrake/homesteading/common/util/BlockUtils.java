@@ -1,14 +1,8 @@
 package jabberdrake.homesteading.common.util;
 
-import jabberdrake.homesteading.Homesteading;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.PillarBlock;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.AxeItem;
-import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import org.slf4j.Logger;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

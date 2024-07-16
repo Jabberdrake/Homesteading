@@ -1,24 +1,16 @@
 package jabberdrake.homesteading.common.datagen;
 
-import com.google.common.collect.Range;
-import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
-import jabberdrake.homesteading.Homesteading;
 import jabberdrake.homesteading.common.block.ChiliCropBlock;
 import jabberdrake.homesteading.common.block.CornCropBlock;
 import jabberdrake.homesteading.common.block.FlaxCropBlock;
 import jabberdrake.homesteading.common.registry.HomeObjects;
-import jabberdrake.homesteading.common.util.HomesteadingProperties;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.client.*;
-import net.minecraft.state.property.Properties;
 import net.minecraft.state.property.Property;
 import net.minecraft.util.Identifier;
-
-import java.util.List;
-import java.util.stream.IntStream;
 
 public class HomeModelProvider extends FabricModelProvider {
 

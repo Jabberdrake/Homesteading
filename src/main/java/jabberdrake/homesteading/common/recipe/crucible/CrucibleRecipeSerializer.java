@@ -1,11 +1,8 @@
 package jabberdrake.homesteading.common.recipe.crucible;
 
-import com.google.gson.JsonObject;
 import com.mojang.serialization.Codec;
-import com.mojang.serialization.JsonOps;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.recipe.RecipeSerializer;
-import net.minecraft.util.Identifier;
 
 public enum CrucibleRecipeSerializer implements RecipeSerializer<CrucibleRecipe> {
     INSTANCE;
