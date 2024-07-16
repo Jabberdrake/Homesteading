@@ -53,14 +53,14 @@ public class CrucibleRecipe implements Recipe<Inventory> {
         int matchAmount = 0;
         int stackSizeTested = 0;
 
-        if (inputSize == 9 && invSize <= 9) {
+        if (inputSize == 9 && invSize < 10) {
             for (int i = 0; i < invSize; i++) {
                 ItemStack stack = inventory.getStack(i);
 
                 inventoryMap.put(i, stack);
             }
 
-            for (int j = 0; j < inventoryMap.size();) {
+            for (int j = 0; j < inventoryMap.size(); j++) {
                 ItemStack stackToTest = inventoryMap.get(j);
 
                 for (int k = 0; k < 9; k++) {
@@ -72,7 +72,6 @@ public class CrucibleRecipe implements Recipe<Inventory> {
 
                         if (stackSizeTested == stackToTest.getCount()) {
                             stackSizeTested = 0;
-                            j++;
                             break;
                         }
                     }

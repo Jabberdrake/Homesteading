@@ -66,6 +66,7 @@ public class HomeObjects {
     public static final Block HAZEL_TRAPDOOR = registerBlock("hazel_trapdoor", new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).nonOpaque(), BlockSetType.OAK), "building", true);
 
     // Blocks: Ores and Metals
+    public static final Block BASALT_GOLD_ORE = registerBlock("basalt_gold_ore", new Block(FabricBlockSettings.copyOf(Blocks.GOLD_ORE).sounds(BlockSoundGroup.BASALT)), "building", true);
     public static final Block TIN_ORE = registerBlock("tin_ore", new Block(FabricBlockSettings.copyOf(Blocks.COPPER_ORE)), "building",true);
     public static final Block DEEPSLATE_TIN_ORE = registerBlock("deepslate_tin_ore", new Block(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_COPPER_ORE)), "building",true);
     public static final Block RAW_TIN_BLOCK = registerBlock("raw_tin_block", new Block(FabricBlockSettings.copyOf(Blocks.RAW_COPPER_BLOCK)), "building", true);

@@ -113,9 +113,6 @@ public class CrucibleBlockEntity extends BlockEntity {
     public void tellRecipe(World world, PlayerEntity player) {
         List<ItemStack> inv = getItemStacks();
 
-        Set<ItemStack> invStacks = new HashSet<>();
-        Set<ItemStack> inputStacks = new HashSet<>();
-
         if (!world.isClient) {
             SimpleInventory simpleInventory = new SimpleInventory(getItemStacks().size());
 

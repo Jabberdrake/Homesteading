@@ -10,6 +10,7 @@ import net.minecraft.block.Block;
 import net.minecraft.data.server.loottable.BlockLootTableGenerator;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.condition.AnyOfLootCondition;
 import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
@@ -29,6 +30,7 @@ public class HomeLootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
+        addDrop(HomeObjects.BASALT_GOLD_ORE, copperLikeOreDrops(HomeObjects.BASALT_GOLD_ORE, Items.RAW_GOLD, 1, 1));
         addDrop(HomeObjects.TIN_ORE, copperLikeOreDrops(HomeObjects.TIN_ORE, HomeObjects.RAW_TIN, 1, 3));
         addDrop(HomeObjects.RAW_TIN_BLOCK);
         addDrop(HomeObjects.TIN_BLOCK);
