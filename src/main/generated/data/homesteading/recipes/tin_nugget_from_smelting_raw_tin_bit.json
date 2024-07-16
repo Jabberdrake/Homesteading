@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 22,
+  "experience": 0.07,
+  "group": "tin_nugget",
+  "ingredient": {
+    "item": "homesteading:raw_tin_bit"
+  },
+  "result": "homesteading:tin_nugget"
+}

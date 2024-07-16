@@ -30,10 +30,16 @@ public class HomeLootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
-        addDrop(HomeObjects.BASALT_GOLD_ORE, copperLikeOreDrops(HomeObjects.BASALT_GOLD_ORE, Items.RAW_GOLD, 1, 1));
+        addDrop(HomeObjects.BASALT_GOLD_ORE, oreDrops(HomeObjects.BASALT_GOLD_ORE, Items.RAW_GOLD));
         addDrop(HomeObjects.TIN_ORE, copperLikeOreDrops(HomeObjects.TIN_ORE, HomeObjects.RAW_TIN, 1, 3));
+        addDrop(HomeObjects.DEEPSLATE_TIN_ORE, copperLikeOreDrops(HomeObjects.TIN_ORE, HomeObjects.RAW_TIN, 1, 3));
         addDrop(HomeObjects.RAW_TIN_BLOCK);
         addDrop(HomeObjects.TIN_BLOCK);
+        addDrop(HomeObjects.ZINC_ORE, copperLikeOreDrops(HomeObjects.ZINC_ORE, HomeObjects.RAW_ZINC, 1, 3));
+        addDrop(HomeObjects.DEEPSLATE_ZINC_ORE, copperLikeOreDrops(HomeObjects.DEEPSLATE_ZINC_ORE, HomeObjects.RAW_ZINC, 1, 3));
+        addDrop(HomeObjects.MARBLE_SILVER_ORE, oreDrops(HomeObjects.MARBLE_SILVER_ORE, HomeObjects.RAW_SILVER));
+        addDrop(HomeObjects.SILVER_ORE, oreDrops(HomeObjects.SILVER_ORE, HomeObjects.RAW_SILVER));
+        addDrop(HomeObjects.DEEPSLATE_SILVER_ORE, oreDrops(HomeObjects.DEEPSLATE_SILVER_ORE, HomeObjects.RAW_SILVER));
         addDrop(HomeObjects.PEAT_BLOCK, drops(HomeObjects.PEAT_BRICK, UniformLootNumberProvider.create(4, 4)));
         addDrop(HomeObjects.CALCITE_STAIRS);
         addDrop(HomeObjects.CALCITE_SLAB, slabDrops(HomeObjects.CALCITE_SLAB));
@@ -61,6 +67,11 @@ public class HomeLootTableProvider extends FabricBlockLootTableProvider {
         BlockStatePropertyLootCondition.Builder flax_builder = BlockStatePropertyLootCondition.builder(HomeObjects.FLAX_CROP).properties(StatePredicate.Builder.create()
                 .exactMatch(FlaxCropBlock.AGE, FlaxCropBlock.MAX_AGE));
         addDrop(HomeObjects.FLAX_CROP, cropDrops(HomeObjects.FLAX_CROP, HomeObjects.FLAX, HomeObjects.FLAX_SEEDS, flax_builder));
+        
+        addDrop(HomeObjects.MARBLE);
+        addDrop(HomeObjects.MARBLE_STAIRS);
+        addDrop(HomeObjects.MARBLE_SLAB);
+        addDrop(HomeObjects.MARBLE_WALL);
     }
 
     public LootTable.Builder copperLikeOreDrops(Block drop, Item item, float minAmount, float maxAmount) {

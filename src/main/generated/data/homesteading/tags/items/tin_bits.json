@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "homesteading:tin_nugget"
+    "homesteading:tin_nugget",
+    "homesteading:raw_tin_bit"
   ]
 }

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "homesteading:block/marble_slab"
+    },
+    "type=double": {
+      "model": "homesteading:block/marble"
+    },
+    "type=top": {
+      "model": "homesteading:block/marble_slab_top"
+    }
+  }
+}

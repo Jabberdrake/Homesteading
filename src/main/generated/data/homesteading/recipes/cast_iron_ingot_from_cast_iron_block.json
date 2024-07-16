@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "homesteading:cast_iron_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "homesteading:cast_iron_ingot"
+  }
+}

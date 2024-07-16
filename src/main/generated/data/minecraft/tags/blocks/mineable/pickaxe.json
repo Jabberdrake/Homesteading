@@ -4,6 +4,15 @@
     "homesteading:tin_ore",
     "homesteading:deepslate_tin_ore",
     "homesteading:raw_tin_block",
-    "homesteading:tin_block"
+    "homesteading:tin_block",
+    "homesteading:basalt_gold_ore",
+    "homesteading:marble",
+    "homesteading:marble_stairs",
+    "homesteading:marble_slab",
+    "homesteading:marble_wall",
+    "homesteading:marble_silver_ore",
+    "homesteading:silver_ore",
+    "homesteading:deepslate_silver_ore",
+    "homesteading:cast_iron_block"
   ]
 }

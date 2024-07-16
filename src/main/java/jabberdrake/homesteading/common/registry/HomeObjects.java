@@ -51,6 +51,10 @@ public class HomeObjects {
     public static final Block CALCITE_BUTTON = registerBlock("calcite_button", new ButtonBlock(FabricBlockSettings.copyOf(Blocks.CALCITE).collidable(false), BlockSetType.STONE, 10, false), "building", true);
     public static final Block CALCITE_PRESSURE_PLATE = registerBlock("calcite_pressure_plate", new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.copyOf(Blocks.CALCITE), BlockSetType.STONE), "building", true);
     public static final Block CALCITE_WALL = registerBlock("calcite_wall", new WallBlock(FabricBlockSettings.copyOf(Blocks.CALCITE)), "building", true);
+    public static final Block MARBLE = registerBlock("marble", new Block(FabricBlockSettings.copyOf(Blocks.DIORITE)), "building", true);
+    public static final Block MARBLE_STAIRS = registerBlock("marble_stairs", new StairsBlock(HomeObjects.MARBLE.getDefaultState(), FabricBlockSettings.copyOf(HomeObjects.MARBLE)), "building", true);
+    public static final Block MARBLE_SLAB = registerBlock("marble_slab", new SlabBlock(FabricBlockSettings.copyOf(HomeObjects.MARBLE)), "building", true);
+    public static final Block MARBLE_WALL = registerBlock("marble_wall", new WallBlock(FabricBlockSettings.copyOf(Blocks.DIORITE)), "building", true);
 
     // Blocks: Refined Wood
     public static final Block STRIPPED_HAZEL_LOG = registerBlock("stripped_hazel_log", new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_LOG)), "building", true);
@@ -67,6 +71,7 @@ public class HomeObjects {
 
     // Blocks: Ores and Metals
     public static final Block BASALT_GOLD_ORE = registerBlock("basalt_gold_ore", new Block(FabricBlockSettings.copyOf(Blocks.GOLD_ORE).sounds(BlockSoundGroup.BASALT)), "building", true);
+    public static final Block CAST_IRON_BLOCK = registerBlock("cast_iron_block", new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)), "building",true);
     public static final Block TIN_ORE = registerBlock("tin_ore", new Block(FabricBlockSettings.copyOf(Blocks.COPPER_ORE)), "building",true);
     public static final Block DEEPSLATE_TIN_ORE = registerBlock("deepslate_tin_ore", new Block(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_COPPER_ORE)), "building",true);
     public static final Block RAW_TIN_BLOCK = registerBlock("raw_tin_block", new Block(FabricBlockSettings.copyOf(Blocks.RAW_COPPER_BLOCK)), "building", true);
@@ -75,8 +80,14 @@ public class HomeObjects {
     public static final Block DEEPSLATE_ZINC_ORE = registerBlock("deepslate_zinc_ore", new Block(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_COPPER_ORE)), "building",true);
     public static final Block RAW_ZINC_BLOCK = registerBlock("raw_zinc_block", new Block(FabricBlockSettings.copyOf(Blocks.RAW_COPPER_BLOCK)), "building", true);
     public static final Block ZINC_BLOCK = registerBlock("zinc_block", new Block(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK)), "building",true);
+    public static final Block BISMUTH_ORE = registerBlock("bismuth_ore", new Block(FabricBlockSettings.copyOf(Blocks.GOLD_ORE)), "building",true);
+    public static final Block DEEPSLATE_BISMUTH_ORE = registerBlock("deepslate_bismuth_ore", new Block(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_GOLD_ORE)), "building",true);
+    public static final Block ANDESITE_BISMUTH_ORE = registerBlock("andesite_bismuth_ore", new Block(FabricBlockSettings.copyOf(Blocks.GOLD_ORE)), "building", true);
+    public static final Block RAW_BISMUTH_BLOCK = registerBlock("raw_bismuth_block", new Block(FabricBlockSettings.copyOf(Blocks.RAW_GOLD_BLOCK)), "building", true);
+    public static final Block BISMUTH_BLOCK = registerBlock("bismuth_block", new Block(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK)), "building",true);
     public static final Block SILVER_ORE = registerBlock("silver_ore", new Block(FabricBlockSettings.copyOf(Blocks.GOLD_ORE)), "building",true);
     public static final Block DEEPSLATE_SILVER_ORE = registerBlock("deepslate_silver_ore", new Block(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_GOLD_ORE)), "building",true);
+    public static final Block MARBLE_SILVER_ORE = registerBlock("marble_silver_ore", new Block(FabricBlockSettings.copyOf(Blocks.GOLD_ORE)), "building", true);
     public static final Block RAW_SILVER_BLOCK = registerBlock("raw_silver_block", new Block(FabricBlockSettings.copyOf(Blocks.RAW_GOLD_BLOCK)), "building", true);
     public static final Block SILVER_BLOCK = registerBlock("silver_block", new Block(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK)), "building",true);
     public static final Block BRONZE_BLOCK = registerBlock("bronze_block", new Block(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK)), "building",true);
@@ -156,23 +167,34 @@ public class HomeObjects {
     // ######################
 
     // Items: Metals
-    public static final Item COPPER_NUGGET = registerItem("copper_nugget", new Item(new FabricItemSettings()), "ingredients");
     public static final Item RAW_IRON_BIT = registerItem("raw_iron_bit", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item CAST_IRON_INGOT = registerItem("cast_iron_ingot", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item CAST_IRON_NUGGET = registerItem("cast_iron_nugget", new Item(new FabricItemSettings()), "ingredients");
     public static final Item RAW_GOLD_BIT = registerItem("raw_gold_bit", new Item(new FabricItemSettings()), "ingredients");
     public static final Item RAW_COPPER_BIT = registerItem("raw_copper_bit", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item COPPER_NUGGET = registerItem("copper_nugget", new Item(new FabricItemSettings()), "ingredients");
     public static final Item RAW_TIN = registerItem("raw_tin", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item RAW_TIN_BIT = registerItem("raw_tin_bit", new Item(new FabricItemSettings()), "ingredients");
     public static final Item TIN_INGOT = registerItem("tin_ingot", new Item(new FabricItemSettings()), "ingredients");
     public static final Item TIN_NUGGET = registerItem("tin_nugget", new Item(new FabricItemSettings()), "ingredients");
     public static final Item RAW_ZINC = registerItem("raw_zinc", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item RAW_ZINC_BIT = registerItem("raw_zinc_bit", new Item(new FabricItemSettings()), "ingredients");
     public static final Item ZINC_INGOT = registerItem("zinc_ingot", new Item(new FabricItemSettings()), "ingredients");
     public static final Item ZINC_NUGGET = registerItem("zinc_nugget", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item RAW_BISMUTH = registerItem("raw_bismuth", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item RAW_BISMUTH_BIT = registerItem("raw_bismuth_bit", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item BISMUTH_INGOT = registerItem("bismuth_ingot", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item BISMUTH_NUGGET = registerItem("bismuth_nugget", new Item(new FabricItemSettings()), "ingredients");
     public static final Item RAW_SILVER = registerItem("raw_silver", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item RAW_SILVER_BIT = registerItem("raw_silver_bit", new Item(new FabricItemSettings()), "ingredients");
     public static final Item SILVER_INGOT = registerItem("silver_ingot", new Item(new FabricItemSettings()), "ingredients");
     public static final Item SILVER_NUGGET = registerItem("silver_nugget", new Item(new FabricItemSettings()), "ingredients");
     public static final Item BRONZE_INGOT = registerItem("bronze_ingot", new Item(new FabricItemSettings()), "ingredients");
     public static final Item BRONZE_NUGGET = registerItem("bronze_nugget", new Item(new FabricItemSettings()), "ingredients");
     public static final Item BRASS_INGOT = registerItem("brass_ingot", new Item(new FabricItemSettings()), "ingredients");
     public static final Item BRASS_NUGGET = registerItem("brass_nugget", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item ELECTRUM_INGOT = registerItem("electrum_ingot", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item ELECTRUM_NUGGET = registerItem("electrum_nugget", new Item(new FabricItemSettings()), "ingredients");
 
     // Items: Ingredients, Other
     public static final Item PEAT_BRICK = registerItem("peat_brick", new Item(new FabricItemSettings()), "ingredients");
@@ -192,6 +214,8 @@ public class HomeObjects {
     // #############
     //Items and blocks here are not supposed to appear in the Creative Menu. If you see any entry using a group different from "groupless" here, change it.
     public static final Item CRUCIBLE_BRONZE = registerItem("crucible_bronze", new FilledCrucibleItem("bronze_alloy", new FabricItemSettings()), "groupless");
+    public static final Item CRUCIBLE_BRASS = registerItem("crucible_brass", new FilledCrucibleItem("brass_alloy", new FabricItemSettings()), "groupless");
+    public static final Item CRUCIBLE_ELECTRUM = registerItem("crucible_electrum", new FilledCrucibleItem("electrum_alloy", new FabricItemSettings()), "groupless");
 
     private static void assignItemGroup(Item item, Identifier identifier, String group) {
         switch (group) {

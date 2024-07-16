@@ -23,7 +23,16 @@ public class HomeBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(HomeObjects.TIN_ORE)
                 .add(HomeObjects.DEEPSLATE_TIN_ORE)
                 .add(HomeObjects.RAW_TIN_BLOCK)
-                .add(HomeObjects.TIN_BLOCK);
+                .add(HomeObjects.TIN_BLOCK)
+                .add(HomeObjects.BASALT_GOLD_ORE)
+                .add(HomeObjects.MARBLE)
+                .add(HomeObjects.MARBLE_STAIRS)
+                .add(HomeObjects.MARBLE_SLAB)
+                .add(HomeObjects.MARBLE_WALL)
+                .add(HomeObjects.MARBLE_SILVER_ORE)
+                .add(HomeObjects.SILVER_ORE)
+                .add(HomeObjects.DEEPSLATE_SILVER_ORE)
+                .add(HomeObjects.CAST_IRON_BLOCK);
 
         // [Vanilla] All blocks that can be broken with a stone-tier tool.
         getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
@@ -42,7 +51,8 @@ public class HomeBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         // [Vanilla] A set of all wall blocks.
         getOrCreateTagBuilder(BlockTags.WALLS)
-                .add(HomeObjects.CALCITE_WALL);
+                .add(HomeObjects.CALCITE_WALL)
+                .add(HomeObjects.MARBLE_WALL);
 
         // [Vanilla] A set of all flammable log blocks.
         getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
@@ -51,6 +61,10 @@ public class HomeBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(HomeObjects.STRIPPED_HAZEL_LOG)
                 .add(HomeObjects.STRIPPED_HAZEL_WOOD);
 
+        //[Vanilla] Adds Basalt Gold Ore to Gold Ores Tag.
+        getOrCreateTagBuilder(BlockTags.GOLD_ORES)
+                .add(HomeObjects.BASALT_GOLD_ORE);
+
 
         // [Homesteading] A set of all vanilla or Homesteading ore blocks.
         getOrCreateTagBuilder(HomeTags.Blocks.ORE_BLOCKS)
@@ -58,8 +72,12 @@ public class HomeBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(HomeObjects.DEEPSLATE_TIN_ORE)
                 .add(HomeObjects.ZINC_ORE)
                 .add(HomeObjects.DEEPSLATE_ZINC_ORE)
+                .add(HomeObjects.BISMUTH_ORE)
+                .add(HomeObjects.DEEPSLATE_BISMUTH_ORE)
+                .add(HomeObjects.ANDESITE_BISMUTH_ORE)
                 .add(HomeObjects.SILVER_ORE)
                 .add(HomeObjects.DEEPSLATE_SILVER_ORE)
+                .add(HomeObjects.MARBLE_SILVER_ORE)
                 .forceAddTag(BlockTags.COAL_ORES)
                 .forceAddTag(BlockTags.COPPER_ORES)
                 .forceAddTag(BlockTags.IRON_ORES)

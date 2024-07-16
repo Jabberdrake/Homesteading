@@ -35,6 +35,10 @@ public class HomeModelProvider extends FabricModelProvider {
         calcitePool.button(HomeObjects.CALCITE_BUTTON);
         calcitePool.pressurePlate(HomeObjects.CALCITE_PRESSURE_PLATE);
         calcitePool.wall(HomeObjects.CALCITE_WALL);
+        BlockStateModelGenerator.BlockTexturePool marblePoll = blockStateModelGenerator.registerCubeAllModelTexturePool(HomeObjects.MARBLE);
+        marblePoll.stairs(HomeObjects.MARBLE_STAIRS);
+        marblePoll.slab(HomeObjects.MARBLE_SLAB);
+        marblePoll.wall(HomeObjects.MARBLE_WALL);
 
         // Blocks: Refined Wood
         blockStateModelGenerator.registerLog(HomeObjects.STRIPPED_HAZEL_LOG).log(HomeObjects.STRIPPED_HAZEL_LOG).wood(HomeObjects.STRIPPED_HAZEL_WOOD);
@@ -51,6 +55,8 @@ public class HomeModelProvider extends FabricModelProvider {
         // Blocks: Ores and Metals
         blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.BASALT_GOLD_ORE);
 
+        blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.CAST_IRON_BLOCK);
+
         blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.TIN_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.DEEPSLATE_TIN_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.RAW_TIN_BLOCK);
@@ -61,8 +67,15 @@ public class HomeModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.RAW_ZINC_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.ZINC_BLOCK);
 
+        blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.BISMUTH_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.DEEPSLATE_BISMUTH_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.ANDESITE_BISMUTH_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.RAW_BISMUTH_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.BISMUTH_BLOCK);
+
         blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.SILVER_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.DEEPSLATE_SILVER_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.MARBLE_SILVER_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.RAW_SILVER_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.SILVER_BLOCK);
 
@@ -123,22 +136,32 @@ public class HomeModelProvider extends FabricModelProvider {
         // Items: Foodstuffs, Other
 
         // Items: Metals
-        itemModelGenerator.register(HomeObjects.COPPER_NUGGET, Models.GENERATED);
         itemModelGenerator.register(HomeObjects.RAW_COPPER_BIT, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.COPPER_NUGGET, Models.GENERATED);
 
         itemModelGenerator.register(HomeObjects.RAW_IRON_BIT, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.CAST_IRON_INGOT, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.CAST_IRON_NUGGET, Models.GENERATED);
 
         itemModelGenerator.register(HomeObjects.RAW_GOLD_BIT, Models.GENERATED);
 
         itemModelGenerator.register(HomeObjects.RAW_TIN, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.RAW_TIN_BIT, Models.GENERATED);
         itemModelGenerator.register(HomeObjects.TIN_INGOT, Models.GENERATED);
         itemModelGenerator.register(HomeObjects.TIN_NUGGET, Models.GENERATED);
 
         itemModelGenerator.register(HomeObjects.RAW_ZINC, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.RAW_ZINC_BIT, Models.GENERATED);
         itemModelGenerator.register(HomeObjects.ZINC_INGOT, Models.GENERATED);
         itemModelGenerator.register(HomeObjects.ZINC_NUGGET, Models.GENERATED);
 
+        itemModelGenerator.register(HomeObjects.RAW_BISMUTH, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.RAW_BISMUTH_BIT, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.BISMUTH_INGOT, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.BISMUTH_NUGGET, Models.GENERATED);
+
         itemModelGenerator.register(HomeObjects.RAW_SILVER, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.RAW_SILVER_BIT, Models.GENERATED);
         itemModelGenerator.register(HomeObjects.SILVER_INGOT, Models.GENERATED);
         itemModelGenerator.register(HomeObjects.SILVER_NUGGET, Models.GENERATED);
 
@@ -147,6 +170,10 @@ public class HomeModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(HomeObjects.BRASS_INGOT, Models.GENERATED);
         itemModelGenerator.register(HomeObjects.BRASS_NUGGET, Models.GENERATED);
+
+        itemModelGenerator.register(HomeObjects.ELECTRUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.ELECTRUM_NUGGET, Models.GENERATED);
+
 
         // Items: Ingredients, Other
         itemModelGenerator.register(HomeObjects.PEAT_BRICK, Models.GENERATED);
