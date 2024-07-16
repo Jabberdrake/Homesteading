@@ -67,7 +67,7 @@ public class HomeLootTableProvider extends FabricBlockLootTableProvider {
         BlockStatePropertyLootCondition.Builder flax_builder = BlockStatePropertyLootCondition.builder(HomeObjects.FLAX_CROP).properties(StatePredicate.Builder.create()
                 .exactMatch(FlaxCropBlock.AGE, FlaxCropBlock.MAX_AGE));
         addDrop(HomeObjects.FLAX_CROP, cropDrops(HomeObjects.FLAX_CROP, HomeObjects.FLAX, HomeObjects.FLAX_SEEDS, flax_builder));
-        
+
         addDrop(HomeObjects.MARBLE);
         addDrop(HomeObjects.MARBLE_STAIRS);
         addDrop(HomeObjects.MARBLE_SLAB);
