@@ -31,6 +31,9 @@ public class HomeModelProvider extends FabricModelProvider {
         marblePoll.stairs(HomeObjects.MARBLE_STAIRS);
         marblePoll.slab(HomeObjects.MARBLE_SLAB);
         marblePoll.wall(HomeObjects.MARBLE_WALL);
+        BlockStateModelGenerator.BlockTexturePool polishedMarblePoll = blockStateModelGenerator.registerCubeAllModelTexturePool(HomeObjects.POLISHED_MARBLE);
+        polishedMarblePoll.stairs(HomeObjects.POLISHED_MARBLE_STAIRS);
+        polishedMarblePoll.slab(HomeObjects.POLISHED_MARBLE_SLAB);
 
         // Blocks: Refined Wood
         blockStateModelGenerator.registerLog(HomeObjects.STRIPPED_HAZEL_LOG).log(HomeObjects.STRIPPED_HAZEL_LOG).wood(HomeObjects.STRIPPED_HAZEL_WOOD);
@@ -72,8 +75,12 @@ public class HomeModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.SILVER_BLOCK);
 
         blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.BRONZE_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.BLACK_BRONZE_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.BISMUTH_BRONZE_BLOCK);
 
         blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.BRASS_BLOCK);
+
+        blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.ELECTRUM_BLOCK);
 
         // Blocks: Building, Other
 
@@ -161,6 +168,10 @@ public class HomeModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(HomeObjects.BRONZE_INGOT, Models.GENERATED);
         itemModelGenerator.register(HomeObjects.BRONZE_NUGGET, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.BLACK_BRONZE_INGOT, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.BLACK_BRONZE_NUGGET, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.BISMUTH_BRONZE_INGOT, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.BISMUTH_BRONZE_NUGGET, Models.GENERATED);
 
         itemModelGenerator.register(HomeObjects.BRASS_INGOT, Models.GENERATED);
         itemModelGenerator.register(HomeObjects.BRASS_NUGGET, Models.GENERATED);

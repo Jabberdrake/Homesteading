@@ -1,0 +1,36 @@
+{
+  "type": "homesteading:crucible",
+  "input": [
+    {
+      "tag": "homesteading:copper_bits"
+    },
+    {
+      "tag": "homesteading:copper_bits"
+    },
+    {
+      "tag": "homesteading:copper_bits"
+    },
+    {
+      "tag": "homesteading:copper_bits"
+    },
+    {
+      "tag": "homesteading:gold_bits"
+    },
+    {
+      "tag": "homesteading:gold_bits"
+    },
+    {
+      "tag": "homesteading:gold_bits"
+    },
+    {
+      "tag": "homesteading:silver_bits"
+    },
+    {
+      "tag": "homesteading:silver_bits"
+    }
+  ],
+  "output": {
+    "id": "homesteading:crucible_black_bronze",
+    "Count": 1
+  }
+}

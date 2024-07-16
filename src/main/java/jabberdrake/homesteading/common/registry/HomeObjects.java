@@ -55,6 +55,9 @@ public class HomeObjects {
     public static final Block MARBLE_STAIRS = registerBlock("marble_stairs", new StairsBlock(HomeObjects.MARBLE.getDefaultState(), FabricBlockSettings.copyOf(HomeObjects.MARBLE)), "building", true);
     public static final Block MARBLE_SLAB = registerBlock("marble_slab", new SlabBlock(FabricBlockSettings.copyOf(HomeObjects.MARBLE)), "building", true);
     public static final Block MARBLE_WALL = registerBlock("marble_wall", new WallBlock(FabricBlockSettings.copyOf(Blocks.DIORITE)), "building", true);
+    public static final Block POLISHED_MARBLE = registerBlock("polished_marble", new Block(FabricBlockSettings.copyOf(Blocks.POLISHED_DIORITE)), "building", true);
+    public static final Block POLISHED_MARBLE_STAIRS = registerBlock("polished_marble_stairs", new StairsBlock(HomeObjects.POLISHED_MARBLE.getDefaultState(), FabricBlockSettings.copyOf(HomeObjects.POLISHED_MARBLE)), "building", true);
+    public static final Block POLISHED_MARBLE_SLAB = registerBlock("polished_marble_slab", new SlabBlock(FabricBlockSettings.copyOf(HomeObjects.POLISHED_MARBLE)), "building", true);
 
     // Blocks: Refined Wood
     public static final Block STRIPPED_HAZEL_LOG = registerBlock("stripped_hazel_log", new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_LOG)), "building", true);
@@ -91,7 +94,10 @@ public class HomeObjects {
     public static final Block RAW_SILVER_BLOCK = registerBlock("raw_silver_block", new Block(FabricBlockSettings.copyOf(Blocks.RAW_GOLD_BLOCK)), "building", true);
     public static final Block SILVER_BLOCK = registerBlock("silver_block", new Block(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK)), "building",true);
     public static final Block BRONZE_BLOCK = registerBlock("bronze_block", new Block(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK)), "building",true);
+    public static final Block BLACK_BRONZE_BLOCK = registerBlock("black_bronze_block", new Block(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK)), "building",true);
+    public static final Block BISMUTH_BRONZE_BLOCK = registerBlock("bismuth_bronze_block", new Block(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK)), "building",true);
     public static final Block BRASS_BLOCK = registerBlock("brass_block", new Block(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK)), "building",true);
+    public static final Block ELECTRUM_BLOCK = registerBlock("electrum_block", new Block(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK)), "building",true);
 
     // Blocks: Building, Other
 
@@ -193,6 +199,10 @@ public class HomeObjects {
     public static final Item SILVER_NUGGET = registerItem("silver_nugget", new Item(new FabricItemSettings()), "ingredients");
     public static final Item BRONZE_INGOT = registerItem("bronze_ingot", new Item(new FabricItemSettings()), "ingredients");
     public static final Item BRONZE_NUGGET = registerItem("bronze_nugget", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item BLACK_BRONZE_INGOT = registerItem("black_bronze_ingot", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item BLACK_BRONZE_NUGGET = registerItem("black_bronze_nugget", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item BISMUTH_BRONZE_INGOT = registerItem("bismuth_bronze_ingot", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item BISMUTH_BRONZE_NUGGET = registerItem("bismuth_bronze_nugget", new Item(new FabricItemSettings()), "ingredients");
     public static final Item BRASS_INGOT = registerItem("brass_ingot", new Item(new FabricItemSettings()), "ingredients");
     public static final Item BRASS_NUGGET = registerItem("brass_nugget", new Item(new FabricItemSettings()), "ingredients");
     public static final Item ELECTRUM_INGOT = registerItem("electrum_ingot", new Item(new FabricItemSettings()), "ingredients");
@@ -216,6 +226,8 @@ public class HomeObjects {
     // #############
     //Items and blocks here are not supposed to appear in the Creative Menu. If you see any entry using a group different from "groupless" here, change it.
     public static final Item CRUCIBLE_BRONZE = registerItem("crucible_bronze", new FilledCrucibleItem("bronze_alloy", new FabricItemSettings()), "groupless");
+    public static final Item CRUCIBLE_BLACK_BRONZE = registerItem("crucible_black_bronze", new FilledCrucibleItem("black_bronze_alloy", new FabricItemSettings()), "groupless");
+    public static final Item CRUCIBLE_BISMUTH_BRONZE = registerItem("crucible_bismuth_bronze", new FilledCrucibleItem("bismuth_bronze_alloy", new FabricItemSettings()), "groupless");
     public static final Item CRUCIBLE_BRASS = registerItem("crucible_brass", new FilledCrucibleItem("brass_alloy", new FabricItemSettings()), "groupless");
     public static final Item CRUCIBLE_ELECTRUM = registerItem("crucible_electrum", new FilledCrucibleItem("electrum_alloy", new FabricItemSettings()), "groupless");
 
@@ -268,7 +280,7 @@ public class HomeObjects {
 
     public static void init() {
         BUILDING_GROUP = FabricItemGroup.builder().displayName(Text.translatable("itemGroup." + Homesteading.MOD_ID + ".building"))
-            .icon(Items.OAK_LOG::getDefaultStack).entries((displayContext, entries) -> {
+            .icon(() -> new ItemStack(HomeObjects.MARBLE)).entries((displayContext, entries) -> {
                 BUILDING.keySet().forEach(entries::add);
             }).build();
 

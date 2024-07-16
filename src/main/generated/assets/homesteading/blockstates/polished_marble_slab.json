@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "homesteading:block/polished_marble_slab"
+    },
+    "type=double": {
+      "model": "homesteading:block/polished_marble"
+    },
+    "type=top": {
+      "model": "homesteading:block/polished_marble_slab_top"
+    }
+  }
+}

@@ -18,6 +18,9 @@
   "block.homesteading.marble_stairs": "Marble Stairs",
   "block.homesteading.marble_slab": "Marble Slab",
   "block.homesteading.marble_wall": "Marble Wall",
+  "block.homesteading.polished_marble": "Polished Marble",
+  "block.homesteading.polished_marble_stairs": "Polished Marble Stairs",
+  "block.homesteading.polished_marble_slab": "Polished Marble Slab",
 
   "homesteading.comment.section2": "BLOCKS: REFINED WOOD",
   "block.homesteading.stripped_hazel_log": "Stripped Hazel Log",
@@ -54,7 +57,10 @@
   "block.homesteading.raw_silver_block": "Block of Raw Silver",
   "block.homesteading.silver_block": "Block of Silver",
   "block.homesteading.bronze_block": "Block of Bronze",
+  "block.homesteading.black_bronze_block": "Block of Black Bronze",
+  "block.homesteading.bismuth_bronze_block": "Block of Bismuth Bronze",
   "block.homesteading.brass_block": "Block of Brass",
+  "block.homesteading.electrum_block": "Block of Electrum",
 
   "homesteading.comment.section4": "BLOCKS: BUILDING, OTHER",
 
@@ -134,6 +140,10 @@
   "item.homesteading.silver_nugget": "Silver Nugget",
   "item.homesteading.bronze_ingot": "Bronze Ingot",
   "item.homesteading.bronze_nugget": "Bronze Nugget",
+  "item.homesteading.black_bronze_ingot": "Black Bronze Ingot",
+  "item.homesteading.black_bronze_nugget": "Black Bronze Nugget",
+  "item.homesteading.bismuth_bronze_ingot": "Bismuth Bronze Ingot",
+  "item.homesteading.bismuth_bronze_nugget": "Bismuth Bronze Nugget",
   "item.homesteading.brass_ingot": "Brass Ingot",
   "item.homesteading.brass_nugget": "Brass Nugget",
   "item.homesteading.electrum_ingot": "Electrum Ingot",
@@ -152,12 +162,16 @@
 
   "homesteading.comment.section29": "ITEMS: GROUPLESS",
   "item.homesteading.crucible_bronze": "Sealed Crucible",
+  "item.homesteading.crucible_black_bronze": "Sealed Crucible",
+  "item.homesteading.crucible_bismuth_bronze": "Sealed Crucible",
   "item.homesteading.crucible_brass": "Sealed Crucible",
   "item.homesteading.crucible_electrum": "Sealed Crucible",
 
   "homesteading.comment.section30": "TOOLTIPS",
   "tooltip.homesteading.prospecting_pick_range": "Range: %s",
-  "tooltip.homesteading.bronze_alloy": "Bronze Alloy",
-  "tooltip.homesteading.brass_alloy": "Brass Alloy",
-  "tooltip.homesteading.electrum_alloy": "Electrum Alloy"
+  "tooltip.homesteading.bronze_alloy": "Bronze",
+  "tooltip.homesteading.black_bronze_alloy": "Black Bronze",
+  "tooltip.homesteading.bismuth_bronze_alloy": "Bismuth Bronze",
+  "tooltip.homesteading.brass_alloy": "Brass",
+  "tooltip.homesteading.electrum_alloy": "Electrum"
 }

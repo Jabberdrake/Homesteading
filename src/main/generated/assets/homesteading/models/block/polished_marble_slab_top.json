@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "homesteading:block/polished_marble",
+    "side": "homesteading:block/polished_marble",
+    "top": "homesteading:block/polished_marble"
+  }
+}

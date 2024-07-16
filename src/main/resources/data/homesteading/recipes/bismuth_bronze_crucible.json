@@ -1,0 +1,36 @@
+{
+  "type": "homesteading:crucible",
+  "input": [
+    {
+      "tag": "homesteading:copper_bits"
+    },
+    {
+      "tag": "homesteading:copper_bits"
+    },
+    {
+      "tag": "homesteading:copper_bits"
+    },
+    {
+      "tag": "homesteading:copper_bits"
+    },
+    {
+      "tag": "homesteading:copper_bits"
+    },
+    {
+      "tag": "homesteading:zinc_bits"
+    },
+    {
+      "tag": "homesteading:zinc_bits"
+    },
+    {
+      "tag": "homesteading:bismuth_bits"
+    },
+    {
+      "tag": "homesteading:bismuth_bits"
+    }
+  ],
+  "output": {
+    "id": "homesteading:crucible_bismuth_bronze",
+    "Count": 1
+  }
+}

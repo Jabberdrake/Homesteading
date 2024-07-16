@@ -48,6 +48,8 @@ public class HomeItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(Items.GOLD_NUGGET)
                 .add(HomeObjects.RAW_GOLD_CHUNK)
                 .add(HomeObjects.BRONZE_NUGGET)
+                .add(HomeObjects.BLACK_BRONZE_NUGGET)
+                .add(HomeObjects.BISMUTH_BRONZE_NUGGET)
                 .add(HomeObjects.BRASS_NUGGET)
                 .add(HomeObjects.ELECTRUM_NUGGET);
 

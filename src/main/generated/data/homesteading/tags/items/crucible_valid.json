@@ -18,6 +18,8 @@
     "minecraft:gold_nugget",
     "homesteading:raw_gold_chunk",
     "homesteading:bronze_nugget",
+    "homesteading:black_bronze_nugget",
+    "homesteading:bismuth_bronze_nugget",
     "homesteading:brass_nugget",
     "homesteading:electrum_nugget"
   ]
