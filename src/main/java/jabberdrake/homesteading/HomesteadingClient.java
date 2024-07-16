@@ -14,6 +14,11 @@ public class HomesteadingClient implements ClientModInitializer {
                 HomeObjects.HAZEL_DOOR,
                 HomeObjects.HAZEL_TRAPDOOR,
                 HomeObjects.HAZEL_LEAVES,
-                HomeObjects.CRUCIBLE);
+
+                HomeObjects.CRUCIBLE,
+
+                HomeObjects.CHILI_CROP,
+                HomeObjects.CORN_CROP,
+                HomeObjects.FLAX_CROP);
     }
 }

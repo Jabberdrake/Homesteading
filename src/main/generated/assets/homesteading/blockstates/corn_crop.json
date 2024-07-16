@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "homesteading:block/corn_crop_stage0_height1"
+    },
+    "age=1": {
+      "model": "homesteading:block/corn_crop_stage1_height1"
+    },
+    "age=2": {
+      "model": "homesteading:block/corn_crop_stage2_height1"
+    },
+    "age=3": {
+      "model": "homesteading:block/corn_crop_stage3_height1"
+    },
+    "age=4": {
+      "model": "homesteading:block/corn_crop_stage2_height2"
+    },
+    "age=5": {
+      "model": "homesteading:block/corn_crop_stage3_height2"
+    }
+  }
+}

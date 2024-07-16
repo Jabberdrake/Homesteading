@@ -1,5 +1,8 @@
 package jabberdrake.homesteading.common.datagen;
 
+import jabberdrake.homesteading.common.block.ChiliCropBlock;
+import jabberdrake.homesteading.common.block.CornCropBlock;
+import jabberdrake.homesteading.common.block.FlaxCropBlock;
 import jabberdrake.homesteading.common.registry.HomeObjects;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
@@ -8,12 +11,15 @@ import net.minecraft.data.server.loottable.BlockLootTableGenerator;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.Item;
 import net.minecraft.loot.LootTable;
+import net.minecraft.loot.condition.AnyOfLootCondition;
+import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.entry.LeafEntry;
 import net.minecraft.loot.entry.LootPoolEntry;
 import net.minecraft.loot.function.ApplyBonusLootFunction;
 import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
+import net.minecraft.predicate.StatePredicate;
 
 public class HomeLootTableProvider extends FabricBlockLootTableProvider {
 
@@ -41,6 +47,18 @@ public class HomeLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(HomeObjects.HAZEL_DOOR, doorDrops(HomeObjects.HAZEL_DOOR));
         addDrop(HomeObjects.HAZEL_TRAPDOOR);
         addDrop(HomeObjects.CRUCIBLE);
+
+        BlockStatePropertyLootCondition.Builder chili_builder = BlockStatePropertyLootCondition.builder(HomeObjects.CHILI_CROP).properties(StatePredicate.Builder.create()
+                .exactMatch(ChiliCropBlock.AGE, ChiliCropBlock.MAX_AGE));
+        addDrop(HomeObjects.CHILI_CROP, cropDrops(HomeObjects.CHILI_CROP, HomeObjects.CHILI_PEPPER, HomeObjects.CHILI_SEEDS, chili_builder));
+
+        BlockStatePropertyLootCondition.Builder corn_builder = BlockStatePropertyLootCondition.builder(HomeObjects.CORN_CROP).properties(StatePredicate.Builder.create()
+                .exactMatch(CornCropBlock.AGE, CornCropBlock.MAX_AGE));
+        addDrop(HomeObjects.CORN_CROP, cropDrops(HomeObjects.CORN_CROP, HomeObjects.CORN, HomeObjects.CORN_SEEDS, corn_builder));
+
+        BlockStatePropertyLootCondition.Builder flax_builder = BlockStatePropertyLootCondition.builder(HomeObjects.FLAX_CROP).properties(StatePredicate.Builder.create()
+                .exactMatch(FlaxCropBlock.AGE, FlaxCropBlock.MAX_AGE));
+        addDrop(HomeObjects.FLAX_CROP, cropDrops(HomeObjects.FLAX_CROP, HomeObjects.FLAX, HomeObjects.FLAX_SEEDS, flax_builder));
     }
 
     public LootTable.Builder copperLikeOreDrops(Block drop, Item item, float minAmount, float maxAmount) {

@@ -12,4 +12,9 @@ public class HomeFoodComponents {
             .statusEffect(new StatusEffectInstance(StatusEffects.HASTE, 400), 1f)
             .statusEffect(new StatusEffectInstance(StatusEffects.INSTANT_DAMAGE, 1), 1f)
             .build();
+
+    public static final FoodComponent CORN = new FoodComponent.Builder()
+            .hunger(2)
+            .saturationModifier(0.5f)
+            .build();
 }

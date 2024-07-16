@@ -1,0 +1,40 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "homesteading:block/flax_crop_stage0_height1"
+    },
+    "age=1": {
+      "model": "homesteading:block/flax_crop_stage1_height1"
+    },
+    "age=10": {
+      "model": "homesteading:block/flax_crop_stage6_height2"
+    },
+    "age=11": {
+      "model": "homesteading:block/flax_crop_stage7_height2"
+    },
+    "age=2": {
+      "model": "homesteading:block/flax_crop_stage2_height1"
+    },
+    "age=3": {
+      "model": "homesteading:block/flax_crop_stage3_height1"
+    },
+    "age=4": {
+      "model": "homesteading:block/flax_crop_stage4_height1"
+    },
+    "age=5": {
+      "model": "homesteading:block/flax_crop_stage5_height1"
+    },
+    "age=6": {
+      "model": "homesteading:block/flax_crop_stage6_height1"
+    },
+    "age=7": {
+      "model": "homesteading:block/flax_crop_stage7_height1"
+    },
+    "age=8": {
+      "model": "homesteading:block/flax_crop_stage4_height2"
+    },
+    "age=9": {
+      "model": "homesteading:block/flax_crop_stage5_height2"
+    }
+  }
+}

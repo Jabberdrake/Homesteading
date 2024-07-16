@@ -1,12 +1,24 @@
 package jabberdrake.homesteading.common.datagen;
 
+import com.google.common.collect.Range;
+import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
+import jabberdrake.homesteading.Homesteading;
+import jabberdrake.homesteading.common.block.ChiliCropBlock;
+import jabberdrake.homesteading.common.block.CornCropBlock;
+import jabberdrake.homesteading.common.block.FlaxCropBlock;
 import jabberdrake.homesteading.common.registry.HomeObjects;
+import jabberdrake.homesteading.common.util.HomesteadingProperties;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
+import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.data.client.BlockStateModelGenerator;
-import net.minecraft.data.client.ItemModelGenerator;
-import net.minecraft.data.client.Models;
+import net.minecraft.data.client.*;
+import net.minecraft.state.property.Properties;
+import net.minecraft.state.property.Property;
+import net.minecraft.util.Identifier;
+
+import java.util.List;
+import java.util.stream.IntStream;
 
 public class HomeModelProvider extends FabricModelProvider {
 
@@ -68,6 +80,9 @@ public class HomeModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(HomeObjects.HAZEL_LEAVES);
 
         // Blocks: Natural, Other
+        blockStateModelGenerator.registerCrop(HomeObjects.CHILI_CROP, ChiliCropBlock.AGE, 0, 1, 2);
+        registerTallCrop(blockStateModelGenerator, HomeObjects.CORN_CROP, false, CornCropBlock.AGE, 1, 1, 2, 2);
+        registerTallCrop(blockStateModelGenerator, HomeObjects.FLAX_CROP, false, FlaxCropBlock.AGE, 1, 1, 1, 1, 2, 2, 2, 2);
 
         // Blocks: Misc
     }
@@ -95,6 +110,7 @@ public class HomeModelProvider extends FabricModelProvider {
 
         // Items: Crops
         itemModelGenerator.register(HomeObjects.CHILI_PEPPER, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.CORN, Models.GENERATED);
 
         // Items: Food
 
@@ -132,8 +148,54 @@ public class HomeModelProvider extends FabricModelProvider {
 
         // Items: Ingredients, Other
         itemModelGenerator.register(HomeObjects.PEAT_BRICK, Models.GENERATED);
+        itemModelGenerator.register(HomeObjects.FLAX, Models.GENERATED);
 
         // Items: Misc
+
+    }
+
+    public static void registerTallCrop(BlockStateModelGenerator generator, Block crop, boolean useCropModel, Property<Integer> ageProperty, int... heightsPerStage) {
+
+        int maxStage = heightsPerStage.length - 1;
+        int maxHeight = 0;
+        int segments = 0;
+        for (int height : heightsPerStage) {
+            segments += height;
+            if (height > maxHeight)
+                maxHeight = height;
+        }
+
+        if (ageProperty.getValues().size() != segments) {
+            throw new IllegalArgumentException();
+        }
+
+        int finalMaxHeight = maxHeight;
+        BlockStateVariantMap variantMap = BlockStateVariantMap.create(ageProperty).register(age -> {
+            int stage = 0;
+            int height = 1;
+            seek: {
+                int segment = 0;
+                for (int h = 1; h <= finalMaxHeight; h++) {
+                    for (int s = 0; s <= maxStage; s++) {
+                        // check this condition for bugs and shit
+                        if (heightsPerStage[s] < h) {
+                            continue;
+                        } else if (segment == age) {
+                            stage = s;
+                            height = h;
+                            break seek;
+                        } else {
+                            segment++;
+                        }
+                    }
+                }
+            }
+            Identifier identifier = generator.createSubModel(crop, "_stage" + stage + "_height" + height, useCropModel ? Models.CROP : Models.TINTED_CROSS, useCropModel ? TextureMap::crop : TextureMap::cross);
+            return BlockStateVariant.create().put(VariantSettings.MODEL, identifier);
+        });
+
+        generator.registerItemModel(crop.asItem());
+        generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(crop).coordinate(variantMap));
 
     }
 }

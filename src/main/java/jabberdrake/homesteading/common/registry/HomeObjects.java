@@ -1,16 +1,18 @@
 package jabberdrake.homesteading.common.registry;
 
 import jabberdrake.homesteading.Homesteading;
-import jabberdrake.homesteading.common.block.CrucibleBlock;
+import jabberdrake.homesteading.common.block.*;
 import jabberdrake.homesteading.common.item.FilledCrucibleItem;
 import jabberdrake.homesteading.common.item.ProspectingPickItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
@@ -37,6 +39,7 @@ public class HomeObjects {
     private static final Map<Item, Identifier> FOODSTUFFS = new LinkedHashMap<>();
     private static final Map<Item, Identifier> INGREDIENTS = new LinkedHashMap<>();
     private static final Map<Item, Identifier> MISC = new LinkedHashMap<>();
+
 
     // ###################
     // # Group: BUILDING #
@@ -102,8 +105,13 @@ public class HomeObjects {
     public static final Block HAZEL_LEAVES = registerBlock("hazel_leaves", new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).nonOpaque()), "natural", true);
 
     // Blocks: Natural, Other
-
+    public static final Block CHILI_CROP = registerBlock("chili_crop", new ChiliCropBlock(AbstractBlock.Settings.create().mapColor(MapColor.DARK_GREEN).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP).pistonBehavior(PistonBehavior.DESTROY)), "groupless", false);
+    public static final Block FLAX_CROP = registerBlock("flax_crop", new FlaxCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)), "groupless", false);
+    public static final Block CORN_CROP = registerBlock("corn_crop", new CornCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)), "groupless", false);
     // Items: Seeds
+    public static final Item CHILI_SEEDS = registerItem("chili_seeds", new AliasedBlockItem(CHILI_CROP, new FabricItemSettings()), "natural");
+    public static final Item CORN_SEEDS = registerItem("corn_seeds", new AliasedBlockItem(CORN_CROP, new FabricItemSettings()), "natural");
+    public static final Item FLAX_SEEDS = registerItem("flax_seeds", new AliasedBlockItem(FLAX_CROP, new FabricItemSettings()), "natural");
 
     // Items: Saplings
 
@@ -132,6 +140,7 @@ public class HomeObjects {
 
     // Items: Crops
     public static final Item CHILI_PEPPER = registerItem("chili_pepper", new Item(new FabricItemSettings().food(HomeFoodComponents.CHILI_PEPPER)), "foodstuffs");
+    public static final Item CORN = registerItem("corn", new Item(new FabricItemSettings().food(HomeFoodComponents.CORN)), "foodstuffs");
 
     // Items: Food
 
@@ -166,6 +175,7 @@ public class HomeObjects {
 
     // Items: Ingredients, Other
     public static final Item PEAT_BRICK = registerItem("peat_brick", new Item(new FabricItemSettings()), "ingredients");
+    public static final Item FLAX = registerItem("flax", new Item(new FabricItemSettings()), "ingredients");
 
     // ###############
     // # Group: MISC #

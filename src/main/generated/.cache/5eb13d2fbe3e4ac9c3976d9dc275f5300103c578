@@ -1,8 +1,8 @@
-// 1.20.2	2024-07-05T09:23:39.1334318	Homesteading/Tags for minecraft:item
-0288e5a78aab5bae844c1826a7c865ed6d9d0c41 data\minecraft\tags\items\planks.json
-32a273315658f7db2ae401b7d20d015d482c5fae data\minecraft\tags\items\logs_that_burn.json
+// 1.20.2	2024-07-15T23:45:25.9449483	Homesteading/Tags for minecraft:item
+03e4e6fd91b9034fb956b3b72c267fef8f4f3bc1 data\homesteading\tags\items\gold_bits.json
 da0c6951a9a001b06a5939ce2a92814172e6ca80 data\homesteading\tags\items\iron_bits.json
+0288e5a78aab5bae844c1826a7c865ed6d9d0c41 data\minecraft\tags\items\planks.json
 6a6c41ac94106daa4fa01309952f49e8b64e4c2a data\homesteading\tags\items\copper_bits.json
 4213146e674fd8f0ac4cfb78cdb7400d9d9ee3fe data\homesteading\tags\items\crucible_valid.json
-03e4e6fd91b9034fb956b3b72c267fef8f4f3bc1 data\homesteading\tags\items\gold_bits.json
+32a273315658f7db2ae401b7d20d015d482c5fae data\minecraft\tags\items\logs_that_burn.json
 b47bd6d66b1afb77c73d9ae8c66745916c2466ab data\homesteading\tags\items\tin_bits.json

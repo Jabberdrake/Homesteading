@@ -1,37 +1,98 @@
 ### CREDITS ###
 
+ ##   DESIGN   ##
+
+Jabberdrake
+deSpaceman
+
+ ##   PROGRAMMING   ##
+
+Jabberdrake
+deSpaceman
+
  ##   ART   ##
 
-ITEMS:
-Tin Set, all: by _rofoo_
-Zinc Set, all: by CodenamedSuper
-Silver Set, all: by farcr
-Bronze Set, all: by Yapetto
-Brass Set, all: by CodenamedSuper
-Ruby: by thecraftyghost
-Peat Brick: by breton_aerouant
-Ash: by i forgor
+deSpaceman:
+- Tin Item Set, all
+- Zinc Item Set, all
+- Silver Item Set, all
+- Bronze Item Set, all
+- Brass Item Set, all
+- Crucibles, all
+- Vanilla Ore Bits (Copper, Iron and Gold)
 
-BLOCKS:
-Tin Ores and Blocks, all: by _rofoo_
-Zinc Ores and Blocks, all: by CodenamedSuper
-Silver Ores and Blocks, all: by farcr
-Block of Bronze: by Yapetto
-Block of Brass: by CodenamedSuper
-Ruby Ores and Blocks: by thecraftyghost
-Hazel Block Set, all: by Yapetto
-Olive Block Set, all: by Yapetto
-Willow Block Set, all: by Yapetto
-Sycamore Block Set, all: by Yapetto
-Redwood Block Set, all: by Yapetto
-Peat: by breton_aerouant
-Calcite Block Set, all: by Mojang
-Limestone: by imnotseby
-Ash Block: by i forgor
+breton_aerouant:
+- Peat Set, all
+- Chili Set, all
 
-WEAPONS & TOOLS:
-Crocodile Spear: 3d model by Lunar Studios, 2d sprite by Jabberdrake
-Prospecting Picks, all: base by Peeko, edited by Jabberdrake
+Jabberdrake:
+- Iron Prospecting Pick
+- Tin Item Set, all
+- Zinc Item Set, all
+- Silver Item Set, all
 
-FOODS:
-Chili Pepper: by breton_aerouant
+Yapetto: (temp art, only to be used in dev builds)
+- Hazel Wood Set, all
+- Olive Wood Set, all
+- Willow Wood Set, all
+- Sycamore Wood Set, all
+- Redwood Wood Set, all
+
+CodenamedSuper: (temp art, only to be used in dev builds)
+- Brass Block Set, all
+
+Crispy: (temp art, only to be used in dev builds)
+- Corn Crop
+
+thecraftyghost: (temp art, only to be used in dev builds)
+- Ruby
+
+ArBeef: (temp art, only to be used in dev builds)
+- Corn Seeds
+
+dushnilanus: (temp art, only to be used in dev builds)
+- Ash Item
+
+DanielMarionette: (temp art, only to be used in dev builds)
+- Ash Block
+
+Lunar Studios:
+- Crocodile Spear Model (available for free on their storepage!)
+
+ ##   OTHER   ##
+
+# A massive thanks to our friends whom we bounced ideas off of far too often:
+- EfficientParadox57
+- CharlieS401
+- MisticCrafter
+- foxmunk
+- Nadeko
+- tabletablet
+- paleozoey
+- Dotto21
+
+# And to the many community artists whose work inspired us and helped us in early builds of the mod:
+- Yapetto
+- CodenamedSuper
+- _rofoo_
+- thecraftyghost
+- crispytwig
+- Paperfishhh
+- farcr
+- imnotseby
+- Peeko
+- ArBeet
+- Durgerking
+- SeleneDistress
+- ner4t
+- Krillo
+- Nary
+- Kiwifruit
+- Tellioarid
+- Kiwifruit
+- sheddmerstk
+- yanasakana
+- DanielMarionette
+- dushnilanus
+- keyberries
+- cupojo3
