@@ -63,10 +63,10 @@ Lunar Studios:
 
 # A massive thanks to our friends whom we bounced ideas off of far too often:
 - EfficientParadox57
-- CharlieS401
 - MisticCrafter
-- foxmunk
 - Nadeko
+- CharlieS401
+- foxmunk
 - tabletablet
 - paleozoey
 - Dotto21
