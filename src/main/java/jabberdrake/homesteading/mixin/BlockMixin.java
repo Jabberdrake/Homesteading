@@ -8,7 +8,9 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import org.slf4j.LoggerFactory;
 import org.spongepowered.asm.mixin.Mixin;
@@ -50,8 +52,10 @@ public abstract class BlockMixin extends AbstractBlock {
         // - the player is using an axe;
         if (PlayerUtils.canFellTree(world, pos, state, player)) {
             List<BlockPos> logs = BlockUtils.findAllLogsAbove(world, pos, state);
+            int delay = 1;
             for (BlockPos log : logs) {
-                world.breakBlock(log, true, player, 512);
+                world.scheduleBlockTick(log, world.getBlockState(log).getBlock(), delay);
+                delay = delay + 2;
                 // Axe item may break during this loop, hence the per-loop check
                 if (!player.getMainHandStack().isEmpty())
                     player.getMainHandStack().damage(1, player, playerEntity -> playerEntity.sendToolBreakStatus(playerEntity.getActiveHand()));

@@ -31,7 +31,6 @@ public class TallCropBlock extends CropBlock {
     private static final int[] BLOCKHEIGHT_PER_STAGE = new int[]{1, 1, 2, 2};
     private static final double[] PIXELHEIGHT_PER_STAGE = new double[]{8.0, 14.0, 22.0, 30.0};
 
-    // Despite IntelliJ's insistence, no, these variables cannot be set to final.
     private static VoxelShape[] SHAPE_PER_SEGMENT = null;
     private static Map<Integer, List<Integer>> STAGE_TO_AGES = null;
 
