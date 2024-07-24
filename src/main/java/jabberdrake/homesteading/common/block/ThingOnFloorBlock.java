@@ -1,9 +1,6 @@
 package jabberdrake.homesteading.common.block;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.ShapeContext;
-import net.minecraft.block.Waterloggable;
+import net.minecraft.block.*;
 import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.FluidState;
@@ -30,10 +27,10 @@ import org.jetbrains.annotations.Nullable;
 public class ThingOnFloorBlock extends Block implements Waterloggable {
     public static final BooleanProperty WATERLOGGED;
     private final Item drop;
-    protected static final VoxelShape SHAPE = Block.createCuboidShape(6.0, 0.0, 6.0, 8.0, 6.0, 8.0);
+    protected static final VoxelShape SHAPE = Block.createCuboidShape(2.0, 0.0, 2.0, 14.0, 3.0, 14.0);
 
     public ThingOnFloorBlock(Item drop, Settings settings) {
-        super(settings.noCollision());
+        super(settings.noCollision().breakInstantly().nonOpaque());
         this.drop = drop;
         this.setDefaultState((BlockState) (this.stateManager.getDefaultState()).with(WATERLOGGED, false));
     }
@@ -50,6 +47,7 @@ public class ThingOnFloorBlock extends Block implements Waterloggable {
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         player.getInventory().offerOrDrop(this.drop.getDefaultStack());
+        world.setBlockState(pos, Blocks.AIR.getDefaultState());
 
         return ActionResult.SUCCESS;
     }

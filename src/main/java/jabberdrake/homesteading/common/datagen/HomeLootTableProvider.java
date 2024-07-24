@@ -74,6 +74,8 @@ public class HomeLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(HomeObjects.MARBLE_STAIRS);
         addDrop(HomeObjects.MARBLE_SLAB);
         addDrop(HomeObjects.MARBLE_WALL);
+
+        addDrop(HomeObjects.COPPER_CHUNK_ON_GROUND, drops(HomeObjects.RAW_COPPER_CHUNK));
     }
 
     public LootTable.Builder copperLikeOreDrops(Block drop, Item item, float minAmount, float maxAmount) {

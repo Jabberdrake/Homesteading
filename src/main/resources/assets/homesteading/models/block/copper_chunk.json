@@ -1,0 +1,7 @@
+{
+  "parent": "homesteading:block/templates/ore_chunk",
+  "textures": {
+    "0": "homesteading:block/copper_chunk",
+    "particle": "homesteading:block/copper_chunk"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+	{
+      "model": "homesteading:block/copper_chunk"
+    },
+	{
+      "model": "homesteading:block/copper_chunk",
+      "y": 90
+    },
+	{
+      "model": "homesteading:block/copper_chunk",
+      "y": 180
+    },
+	{
+      "model": "homesteading:block/copper_chunk",
+      "y": 270
+    }
+	]
+  }
+}

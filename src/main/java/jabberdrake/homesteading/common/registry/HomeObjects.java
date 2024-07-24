@@ -221,6 +221,12 @@ public class HomeObjects {
     // Items: Misc
     public static final Item CROCODILE_SPEAR = registerItem("crocodile_spear", new Item(new FabricItemSettings().maxCount(1)), "misc");
 
+    // ####################
+    // # THINGS ON GROUND #
+    // ####################
+    //This is only here to avoid Illegal Foward Reference Exceptions, everything here goes in the Natural group
+    public static final Block COPPER_CHUNK_ON_GROUND = registerBlock("copper_chunk_on_ground", new ThingOnFloorBlock(RAW_COPPER_CHUNK, FabricBlockSettings.create().sounds(BlockSoundGroup.BASALT)), "natural", true);
+
     // #############
     // # GROUPLESS #
     // #############
